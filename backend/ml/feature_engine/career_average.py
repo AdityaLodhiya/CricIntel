@@ -1,21 +1,13 @@
-"""
-Career Average Feature Builder.
+import pandas as pd
+from .utils import normalize
 
-Computes career-level batting and bowling averages per format.
-"""
-
-
-def compute_career_average(player_id: int, format_type: str) -> dict:
+def compute_career_rating(df: pd.DataFrame) -> pd.Series:
     """
     Compute career average features for a player.
-
-    Args:
-        player_id: Database player identifier.
-        format_type: Match format (TEST, ODI, T20I).
-
-    Returns:
-        Dictionary of career average features.
-
-    TODO: Implement using aggregated performance data.
     """
-    raise NotImplementedError('Career average computation — Coming Soon')
+    career_score = (
+        df.get('career_runs', 0) * 0.4 +
+        df.get('career_average', 0) * 0.2 +
+        df.get('career_wickets', 0) * 25 * 0.4
+    )
+    return normalize(career_score)

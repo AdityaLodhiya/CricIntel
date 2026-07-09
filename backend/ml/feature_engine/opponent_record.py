@@ -1,22 +1,14 @@
-"""
-Opponent Record Feature Builder.
+import pandas as pd
+from .utils import normalize
 
-Computes player performance history against a specific opponent.
-"""
-
-
-def compute_opponent_record(player_id: int, opponent: str, format_type: str) -> dict:
+def compute_opponent_record(df: pd.DataFrame) -> pd.Series:
     """
     Compute opponent-specific record features.
-
-    Args:
-        player_id: Database player identifier.
-        opponent: Opposing team name.
-        format_type: Match format (TEST, ODI, T20I).
-
-    Returns:
-        Dictionary of opponent record features.
-
-    TODO: Implement using match and performance data filtered by opponent.
+    Historical opponent success.
     """
-    raise NotImplementedError('Opponent record computation — Coming Soon')
+    opp_score = (
+        df.get('runs_vs_opponent', 0) * 0.4 +
+        df.get('average_vs_opponent', 0) * 0.3 +
+        df.get('wickets_vs_opponent', 0) * 25 * 0.3
+    )
+    return normalize(opp_score)

@@ -1,22 +1,14 @@
-"""
-Venue Record Feature Builder.
+import pandas as pd
+from .utils import normalize
 
-Computes player performance history at a specific venue.
-"""
-
-
-def compute_venue_record(player_id: int, venue_id: int, format_type: str) -> dict:
+def compute_venue_record(df: pd.DataFrame) -> pd.Series:
     """
     Compute venue-specific record features.
-
-    Args:
-        player_id: Database player identifier.
-        venue_id: Venue identifier.
-        format_type: Match format (TEST, ODI, T20I).
-
-    Returns:
-        Dictionary of venue record features.
-
-    TODO: Implement using match and performance data filtered by venue.
+    Historical venue success.
     """
-    raise NotImplementedError('Venue record computation — Coming Soon')
+    venue_score = (
+        df.get('runs_at_venue', 0) * 0.4 +
+        df.get('average_at_venue', 0) * 0.3 +
+        df.get('wickets_at_venue', 0) * 25 * 0.3
+    )
+    return normalize(venue_score)

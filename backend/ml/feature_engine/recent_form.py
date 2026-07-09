@@ -1,22 +1,16 @@
-"""
-Recent Form Feature Builder.
+import pandas as pd
+from .utils import normalize
 
-Computes rolling performance metrics over the last N matches.
-"""
-
-
-def compute_recent_form(player_id: int, format_type: str, window: int = 5) -> dict:
+def compute_recent_form(df: pd.DataFrame) -> pd.Series:
     """
     Compute recent form features for a player.
-
-    Args:
-        player_id: Database player identifier.
-        format_type: Match format (TEST, ODI, T20I).
-        window: Number of recent matches to consider.
-
-    Returns:
-        Dictionary of recent form features.
-
-    TODO: Implement using processed performance data.
+    Uses runs, average, sr, wickets, econ from last 5 and last 10.
     """
-    raise NotImplementedError('Recent form computation — Coming Soon')
+    form_score = (
+        df.get('last5_runs', 0) * 0.3 + 
+        df.get('last5_average', 0) * 0.2 + 
+        df.get('last10_runs', 0) * 0.15 + 
+        df.get('last5_wickets', 0) * 20 * 0.25 - 
+        df.get('last5_economy', 0) * 5 * 0.1
+    )
+    return normalize(form_score)
