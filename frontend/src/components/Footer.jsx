@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      <p>CricIntel — AI Powered Indian Playing XI Prediction System</p>
+      <p>CricIntel — AI Powered  Playing XI Prediction System</p>
       <p>Coming Soon</p>
     </footer>
   );

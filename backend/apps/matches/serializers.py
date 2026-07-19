@@ -1,6 +1,13 @@
 from rest_framework import serializers
 
-from .models import Match
+from .models import Match, MatchFormat
+
+
+class MatchFormatQuerySerializer(serializers.Serializer):
+    format = serializers.ChoiceField(
+        choices=[choice[0] for choice in MatchFormat.choices],
+        default=MatchFormat.ODI,
+    )
 
 
 class MatchSerializer(serializers.ModelSerializer):

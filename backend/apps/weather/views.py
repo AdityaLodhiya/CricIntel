@@ -6,8 +6,9 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
+from apps.permissions import IsAdminOrReadOnly
 from .models import WeatherCache
-from .serializers import WeatherCacheSerializer
+from .serializers import WeatherCacheSerializer, WeatherForecastQuerySerializer
 
 
 class WeatherViewSet(viewsets.ModelViewSet):
@@ -19,6 +20,7 @@ class WeatherViewSet(viewsets.ModelViewSet):
 
     queryset = WeatherCache.objects.select_related('venue').all()
     serializer_class = WeatherCacheSerializer
+    permission_classes = [IsAdminOrReadOnly]
 
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
@@ -34,12 +36,14 @@ class WeatherViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['get'])
     def forecast(self, request):
         """Placeholder for venue weather forecast."""
-        venue_id = request.query_params.get('venue_id')
-        date = request.query_params.get('date')
+        serializer = WeatherForecastQuerySerializer(data=request.query_params)
+        serializer.is_valid(raise_exception=True)
+        venue_id = serializer.validated_data.get('venue_id')
+        date = serializer.validated_data.get('date')
         return Response({
             'status': 'placeholder',
             'message': 'Weather forecast — Coming Soon',
             'venue_id': venue_id,
-            'date': date,
+            'date': str(date) if date else None,
             'forecast': {},
         })

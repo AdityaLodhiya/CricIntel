@@ -1,5 +1,7 @@
 from rest_framework import serializers
 
+from apps.matches.models import MatchFormat
+from apps.venues.models import Venue
 from .models import PlayerPrediction, Prediction
 
 
@@ -52,7 +54,20 @@ class PredictionSerializer(serializers.ModelSerializer):
 class PredictionRequestSerializer(serializers.Serializer):
     """Input serializer for prediction requests — placeholder validation only."""
 
-    format = serializers.ChoiceField(choices=['TEST', 'ODI', 'T20I'])
+    format = serializers.ChoiceField(choices=[choice[0] for choice in MatchFormat.choices])
     opponent = serializers.CharField(max_length=100)
-    venue_id = serializers.IntegerField(required=False, allow_null=True)
+    venue_id = serializers.IntegerField(required=False, allow_null=True, min_value=1)
     match_date = serializers.DateField()
+
+    def validate_opponent(self, value):
+        value = ''.join(char for char in value.strip() if char.isprintable())
+        if not value:
+            raise serializers.ValidationError('Opponent is required.')
+        if not all(char.isalnum() or char in " .'-&()" for char in value):
+            raise serializers.ValidationError('Opponent contains unsupported characters.')
+        return value
+
+    def validate_venue_id(self, value):
+        if value is not None and not Venue.objects.filter(pk=value).exists():
+            raise serializers.ValidationError('Venue does not exist.')
+        return value

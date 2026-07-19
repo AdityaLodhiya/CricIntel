@@ -6,6 +6,7 @@ from rest_framework import status, viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
+from apps.permissions import IsAdminOrReadOnly
 from .models import Player
 from .serializers import PlayerSerializer
 
@@ -19,6 +20,7 @@ class PlayerViewSet(viewsets.ModelViewSet):
 
     queryset = Player.objects.all()
     serializer_class = PlayerSerializer
+    permission_classes = [IsAdminOrReadOnly]
 
     def list(self, request, *args, **kwargs):
         """Return placeholder player list when DB is empty."""

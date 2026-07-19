@@ -8,6 +8,7 @@ from rest_framework import status, viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
+from apps.permissions import IsAuthenticatedCreateOrAdminWrite
 from .models import Prediction
 from .serializers import PredictionRequestSerializer, PredictionSerializer
 
@@ -24,6 +25,7 @@ class PredictionViewSet(viewsets.ModelViewSet):
         'player_predictions__player'
     ).all()
     serializer_class = PredictionSerializer
+    permission_classes = [IsAuthenticatedCreateOrAdminWrite]
 
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
