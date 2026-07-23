@@ -14,15 +14,24 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-cricintel-dev-key-change-in-production')
+def env_bool(name, default=False):
+    return os.getenv(name, str(default)).lower() in ('true', '1', 'yes', 'on')
 
-DEBUG = os.getenv('DEBUG', 'True').lower() in ('true', '1', 'yes')
 
-ALLOWED_HOSTS = [
-    host.strip()
-    for host in os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
-    if host.strip()
-]
+def env_list(name, default=''):
+    return [item.strip() for item in os.getenv(name, default).split(',') if item.strip()]
+
+
+DEBUG = env_bool('DEBUG', True)
+
+SECRET_KEY = os.getenv('SECRET_KEY', '')
+if not SECRET_KEY:
+    if DEBUG:
+        SECRET_KEY = 'django-insecure-cricintel-dev-key-change-in-production'
+    else:
+        raise RuntimeError('SECRET_KEY must be set when DEBUG is False.')
+
+ALLOWED_HOSTS = env_list('ALLOWED_HOSTS', 'localhost,127.0.0.1')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -33,9 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Third-party
     'rest_framework',
+    'rest_framework_simplejwt',
+    'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
     'django_filters',
     # CricIntel apps
+    'apps.accounts',
     'apps.players',
     'apps.matches',
     'apps.venues',
@@ -46,6 +58,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'config.security_middleware.StrictAPIMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -79,12 +92,8 @@ ASGI_APPLICATION = 'config.asgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'cricintel'),
-        'USER': os.getenv('DB_USER', 'cricintel_user'),
-        'PASSWORD': os.getenv('DB_PASSWORD', ''),
-        'HOST': os.getenv('DB_HOST', 'localhost'),
-        'PORT': os.getenv('DB_PORT', '5432'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -106,14 +115,20 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS
-CORS_ALLOWED_ORIGINS = [
-    origin.strip()
-    for origin in os.getenv(
-        'CORS_ALLOWED_ORIGINS',
-        'http://localhost:5173,http://127.0.0.1:5173',
-    ).split(',')
-    if origin.strip()
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOWED_ORIGINS = env_list(
+    'CORS_ALLOWED_ORIGINS',
+    'http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:3000',
+)
+CORS_ALLOW_CREDENTIALS = False
+CSRF_TRUSTED_ORIGINS = env_list('CSRF_TRUSTED_ORIGINS', '')
+
+from corsheaders.defaults import default_headers
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    'X-CricIntel-Client',
 ]
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # Django REST Framework
 REST_FRAMEWORK = {
@@ -130,7 +145,55 @@ REST_FRAMEWORK = {
         'rest_framework.filters.SearchFilter',
         'rest_framework.filters.OrderingFilter',
     ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '100/day',
+        'user': '1000/day',
+        'otp': '5/minute', # Custom throttle rate for OTP routes
+    }
 }
+
+from datetime import timedelta
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True,
+    'AUTH_HEADER_TYPES': ('Bearer',),
+}
+
+# Request and browser-facing security controls.
+DATA_UPLOAD_MAX_MEMORY_SIZE = int(os.getenv('DATA_UPLOAD_MAX_MEMORY_SIZE', 1_048_576))
+FILE_UPLOAD_MAX_MEMORY_SIZE = int(os.getenv('FILE_UPLOAD_MAX_MEMORY_SIZE', 1_048_576))
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_REFERRER_POLICY = 'same-origin'
+X_FRAME_OPTIONS = 'DENY'
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SECURE = env_bool('SESSION_COOKIE_SECURE', not DEBUG)
+CSRF_COOKIE_SECURE = env_bool('CSRF_COOKIE_SECURE', not DEBUG)
+SECURE_SSL_REDIRECT = env_bool('SECURE_SSL_REDIRECT', False)
+SECURE_HSTS_SECONDS = int(os.getenv('SECURE_HSTS_SECONDS', 0 if DEBUG else 31_536_000))
+SECURE_HSTS_INCLUDE_SUBDOMAINS = env_bool('SECURE_HSTS_INCLUDE_SUBDOMAINS', not DEBUG)
+SECURE_HSTS_PRELOAD = env_bool('SECURE_HSTS_PRELOAD', False)
+
+# Email Backend Configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
+EMAIL_USE_TLS = env_bool('EMAIL_USE_TLS', True)
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
 
 # ML paths (used by pipelines — not by Django views directly)
 ML_MODELS_DIR = BASE_DIR / os.getenv('ML_MODELS_DIR', 'ml/models')

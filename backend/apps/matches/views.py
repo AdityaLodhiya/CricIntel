@@ -6,8 +6,9 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
+from apps.permissions import IsAdminOrReadOnly
 from .models import Match
-from .serializers import MatchSerializer
+from .serializers import MatchFormatQuerySerializer, MatchSerializer
 
 
 class MatchViewSet(viewsets.ModelViewSet):
@@ -19,6 +20,7 @@ class MatchViewSet(viewsets.ModelViewSet):
 
     queryset = Match.objects.select_related('venue').all()
     serializer_class = MatchSerializer
+    permission_classes = [IsAdminOrReadOnly]
 
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
@@ -43,7 +45,9 @@ class MatchViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['get'])
     def by_format(self, request):
         """Placeholder for matches filtered by format."""
-        match_format = request.query_params.get('format', 'ODI')
+        serializer = MatchFormatQuerySerializer(data=request.query_params)
+        serializer.is_valid(raise_exception=True)
+        match_format = serializer.validated_data['format']
         return Response({
             'status': 'placeholder',
             'message': f'Matches by format ({match_format}) — Coming Soon',

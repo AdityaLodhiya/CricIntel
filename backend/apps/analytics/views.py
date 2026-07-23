@@ -6,8 +6,9 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
+from apps.permissions import IsAdminOrReadOnly
 from .models import FormatStats
-from .serializers import FormatStatsSerializer
+from .serializers import FormatStatsSerializer, LeaderboardQuerySerializer, PlayerSummaryQuerySerializer
 
 
 class AnalyticsViewSet(viewsets.ModelViewSet):
@@ -19,6 +20,7 @@ class AnalyticsViewSet(viewsets.ModelViewSet):
 
     queryset = FormatStats.objects.select_related('player').all()
     serializer_class = FormatStatsSerializer
+    permission_classes = [IsAdminOrReadOnly]
 
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
@@ -34,8 +36,10 @@ class AnalyticsViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['get'])
     def leaderboard(self, request):
         """Placeholder for format-specific leaderboards."""
-        match_format = request.query_params.get('format', 'ODI')
-        metric = request.query_params.get('metric', 'runs_total')
+        serializer = LeaderboardQuerySerializer(data=request.query_params)
+        serializer.is_valid(raise_exception=True)
+        match_format = serializer.validated_data['format']
+        metric = serializer.validated_data['metric']
         return Response({
             'status': 'placeholder',
             'message': 'Leaderboard — Coming Soon',
@@ -47,7 +51,9 @@ class AnalyticsViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['get'])
     def player_summary(self, request):
         """Placeholder for cross-format player summary."""
-        player_id = request.query_params.get('player_id')
+        serializer = PlayerSummaryQuerySerializer(data=request.query_params)
+        serializer.is_valid(raise_exception=True)
+        player_id = serializer.validated_data['player_id']
         return Response({
             'status': 'placeholder',
             'message': 'Player summary — Coming Soon',

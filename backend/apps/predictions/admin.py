@@ -12,6 +12,7 @@ class PlayerPredictionInline(admin.TabularInline):
 @admin.register(Prediction)
 class PredictionAdmin(admin.ModelAdmin):
     list_display = ['match_date', 'format', 'opponent', 'venue', 'status', 'created_at']
+    readonly_fields = ['created_at']
     list_filter = ['format', 'status']
     inlines = [PlayerPredictionInline]
 

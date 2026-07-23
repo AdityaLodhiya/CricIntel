@@ -1,11 +1,8 @@
-"""Backend integration tests — placeholder."""
+"""Backend integration tests placeholder."""
 
-import pytest
+from django.test import TestCase
 
 
-@pytest.mark.django_db
-class TestAPIHealth:
-    """TODO: Add health check and API smoke tests."""
-
+class APIHealthTests(TestCase):
     def test_placeholder(self):
-        assert True
+        self.assertTrue(True)
