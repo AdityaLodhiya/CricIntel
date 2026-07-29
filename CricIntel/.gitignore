@@ -78,16 +78,16 @@ backend/media/
 backend/staticfiles/
 
 # ML
-backend/ml/models/**/*.pkl
-backend/ml/models/**/*.joblib
-backend/datasets/raw/**/*
-!backend/datasets/raw/**/.gitkeep
-backend/datasets/processed/**/*
-!backend/datasets/processed/.gitkeep
-backend/datasets/features/**/*
-!backend/datasets/features/.gitkeep
-backend/database/backups/**/*
-!backend/database/backups/.gitkeep
+# backend/ml/models/**/*.pkl
+# backend/ml/models/**/*.joblib
+# backend/datasets/raw/**/*
+# !backend/datasets/raw/**/.gitkeep
+# backend/datasets/processed/**/*
+# !backend/datasets/processed/.gitkeep
+# backend/datasets/features/**/*
+# !backend/datasets/features/.gitkeep
+# backend/database/backups/**/*
+# !backend/database/backups/.gitkeep
 
 # Node / React
 frontend/node_modules/

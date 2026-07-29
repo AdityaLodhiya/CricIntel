@@ -1,0 +1,209 @@
+{
+  "odi": {
+    "playing_xi": {
+      "status": "evaluated",
+      "task_type": "classification",
+      "target_col": "selected_in_playing_xi",
+      "n_test_samples": 20172,
+      "metrics": {
+        "accuracy": 0.9975708903430498,
+        "precision": 0.9962380630847882,
+        "recall": 0.9990326949119752,
+        "f1": 0.9976334218787732,
+        "roc_auc": 0.9999788272910111,
+        "confusion_matrix": [
+          [
+            9795,
+            39
+          ],
+          [
+            10,
+            10328
+          ]
+        ]
+      }
+    },
+    "runs": {
+      "status": "evaluated",
+      "task_type": "regression",
+      "target_col": "target_runs",
+      "n_test_samples": 10338,
+      "metrics": {
+        "mae": 16.378971099853516,
+        "rmse": 23.476143923057162,
+        "r2": 0.16481024026870728
+      }
+    },
+    "wickets": {
+      "status": "evaluated",
+      "task_type": "regression",
+      "target_col": "target_wickets",
+      "n_test_samples": 10338,
+      "metrics": {
+        "mae": 0.6388620138168335,
+        "rmse": 0.9534517884910789,
+        "r2": 0.19555360078811646
+      }
+    },
+    "strike_rate": {
+      "status": "evaluated",
+      "task_type": "regression",
+      "target_col": "career_strike_rate",
+      "n_test_samples": 20172,
+      "metrics": {
+        "mae": 6.207813655724899,
+        "rmse": 10.989941484800985,
+        "r2": 0.9273520848906271
+      }
+    },
+    "economy": {
+      "status": "evaluated",
+      "task_type": "regression",
+      "target_col": "career_economy",
+      "n_test_samples": 20172,
+      "metrics": {
+        "mae": 0.8345355352681767,
+        "rmse": 1.8614327182389947,
+        "r2": 0.6368109274889338
+      }
+    }
+  },
+  "t20": {
+    "playing_xi": {
+      "status": "evaluated",
+      "task_type": "classification",
+      "target_col": "selected_in_playing_xi",
+      "n_test_samples": 35109,
+      "metrics": {
+        "accuracy": 0.9930786977698026,
+        "precision": 0.9894110583483434,
+        "recall": 0.9973041373239436,
+        "f1": 0.9933419185138505,
+        "roc_auc": 0.9998091782921589,
+        "confusion_matrix": [
+          [
+            16739,
+            194
+          ],
+          [
+            49,
+            18127
+          ]
+        ]
+      }
+    },
+    "runs": {
+      "status": "evaluated",
+      "task_type": "regression",
+      "target_col": "target_runs",
+      "n_test_samples": 18176,
+      "metrics": {
+        "mae": 9.53242301940918,
+        "rmse": 14.548246947925117,
+        "r2": 0.2068791389465332
+      }
+    },
+    "wickets": {
+      "status": "evaluated",
+      "task_type": "regression",
+      "target_col": "target_wickets",
+      "n_test_samples": 18176,
+      "metrics": {
+        "mae": 0.521027684211731,
+        "rmse": 0.8080568235571051,
+        "r2": 0.2190353274345398
+      }
+    },
+    "strike_rate": {
+      "status": "evaluated",
+      "task_type": "regression",
+      "target_col": "career_strike_rate",
+      "n_test_samples": 35109,
+      "metrics": {
+        "mae": 6.8183493768186585,
+        "rmse": 10.8056623753884,
+        "r2": 0.9534557870433806
+      }
+    },
+    "economy": {
+      "status": "evaluated",
+      "task_type": "regression",
+      "target_col": "career_economy",
+      "n_test_samples": 35109,
+      "metrics": {
+        "mae": 1.3644423223689954,
+        "rmse": 2.749918532558018,
+        "r2": 0.5921227064330572
+      }
+    }
+  },
+  "test": {
+    "playing_xi": {
+      "status": "evaluated",
+      "task_type": "classification",
+      "target_col": "selected_in_playing_xi",
+      "n_test_samples": 5811,
+      "metrics": {
+        "accuracy": 0.9998279125795905,
+        "precision": 1.0,
+        "recall": 0.9996640913671482,
+        "f1": 0.9998320174701831,
+        "roc_auc": 1.0,
+        "confusion_matrix": [
+          [
+            2834,
+            0
+          ],
+          [
+            1,
+            2976
+          ]
+        ]
+      }
+    },
+    "runs": {
+      "status": "evaluated",
+      "task_type": "regression",
+      "target_col": "target_runs",
+      "n_test_samples": 2977,
+      "metrics": {
+        "mae": 30.21535873413086,
+        "rmse": 43.048989002084156,
+        "r2": 0.1654936671257019
+      }
+    },
+    "wickets": {
+      "status": "evaluated",
+      "task_type": "regression",
+      "target_col": "target_wickets",
+      "n_test_samples": 2977,
+      "metrics": {
+        "mae": 1.02948796749115,
+        "rmse": 1.7563381539480927,
+        "r2": 0.4518868923187256
+      }
+    },
+    "strike_rate": {
+      "status": "evaluated",
+      "task_type": "regression",
+      "target_col": "career_strike_rate",
+      "n_test_samples": 5811,
+      "metrics": {
+        "mae": 6.025774398293881,
+        "rmse": 10.465754637524164,
+        "r2": 0.8501149723200735
+      }
+    },
+    "economy": {
+      "status": "evaluated",
+      "task_type": "regression",
+      "target_col": "career_economy",
+      "n_test_samples": 5811,
+      "metrics": {
+        "mae": 0.5702867570708942,
+        "rmse": 1.1584513665578382,
+        "r2": 0.6684830519095859
+      }
+    }
+  }
+}
