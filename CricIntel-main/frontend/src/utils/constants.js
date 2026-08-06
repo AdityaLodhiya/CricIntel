@@ -35,20 +35,39 @@ export function formatPercentage(value) {
  * Get country flag URL from flagcdn.
  */
 export function getFlagUrl(country) {
- const codes = {
-  'India': 'in',
-  'Australia': 'au',
-  'England': 'gb-eng',
-  'New Zealand': 'nz',
-  'South Africa': 'za',
-  'Pakistan': 'pk',
-  'Sri Lanka': 'lk',
-  'West Indies': 'jm',
-  'Bangladesh': 'bd',
-  'Afghanistan': 'af',
-  'Ireland': 'ie',
-  'Zimbabwe': 'zw',
- };
- const code = codes[country] || 'in'; // default to india if not found
- return `https://flagcdn.com/w160/${code}.png`;
+  if (!country) return 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Missing_flag.png';
+  // Normalize country name (remove " Men", " Women", "(Men)", "(Women)", etc.)
+  const cleanCountry = country.replace(/\s*(Men|Women)\s*/i, '').replace(/\(\s*(Men|Women)\s*\)/i, '').trim();
+
+  const codes = {
+    'India': 'in',
+    'Australia': 'au',
+    'England': 'gb-eng',
+    'New Zealand': 'nz',
+    'South Africa': 'za',
+    'Pakistan': 'pk',
+    'Sri Lanka': 'lk',
+    'West Indies': 'jm', // Jamaica as a proxy, or an ICC flag, but jm is commonly used here as placeholder
+    'Bangladesh': 'bd',
+    'Afghanistan': 'af',
+    'Ireland': 'ie',
+    'Zimbabwe': 'zw',
+    'Netherlands': 'nl',
+    'Scotland': 'gb-sct',
+    'UAE': 'ae',
+    'United Arab Emirates': 'ae',
+    'Nepal': 'np',
+    'Oman': 'om',
+    'Namibia': 'na',
+    'USA': 'us',
+    'United States': 'us',
+    'Papua New Guinea': 'pg',
+    'Uganda': 'ug',
+  };
+  const code = codes[cleanCountry];
+  if (!code) {
+    // Neutral placeholder
+    return 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Missing_flag.png';
+  }
+  return `https://flagcdn.com/w160/${code}.png`;
 }

@@ -49,11 +49,8 @@ const BroadcastPlayerCard = ({ player, index, delay, isAway }) => {
       </div>
     </div>
     
-    <div className={cn(
-      "bg-black/80 px-4 py-2 rounded border",
-      isAway ? "border-purple-500/30" : "border-blue-500/30"
-    )}>
-      <div className="text-xl font-black text-primary font-space leading-none text-center">{player.ai_score || '9.2'}</div>
+    <div className="bg-black/80 px-4 py-2 rounded border" style={{ borderColor: isAway ? 'rgba(168,85,247,0.3)' : 'rgba(59,130,246,0.3)' }}>
+      <div className="text-xl font-black text-primary font-space leading-none text-center">{player.ai_score ?? player.impact_score ?? '—'}</div>
       <div className="text-[8px] text-gray-500 uppercase tracking-widest text-center mt-1">Impact Score</div>
     </div>
   </div>
@@ -73,11 +70,15 @@ const BroadcastPlayerCard = ({ player, index, delay, isAway }) => {
     <div className={cn("flex gap-6", isAway && "flex-row-reverse")}>
       <div className="text-center">
         <p className="text-[9px] font-bold text-gray-500 uppercase tracking-widest mb-1">Recent Form</p>
-        <p className="text-sm font-bold text-white">{player.recent_form || 'Good'}</p>
+        <p className="text-sm font-bold text-white">
+          {player.recent_form || (parseFloat(player.ai_score || 0) > 60 ? 'Good' : 'Average')}
+        </p>
       </div>
       <div className="text-center">
         <p className="text-[9px] font-bold text-gray-500 uppercase tracking-widest mb-1">Vs Opponent</p>
-        <p className="text-sm font-bold text-white">Dominant</p>
+        <p className="text-sm font-bold text-white">
+          {player.vs_opponent || player.vs_record || (parseFloat(player.ai_score || 0) > 70 ? 'Dominant' : 'Good')}
+        </p>
       </div>
     </div>
   </div>
@@ -93,7 +94,14 @@ const PlayingXIReveal = ({ homeXI, awayXI, matchDetails }) => {
   
   if (!homeXI || !awayXI || homeXI.length === 0 || awayXI.length === 0) return null
 
-  const activeTeam = activeTab === 'home' ? homeXI : awayXI
+  const ROLE_ORDER = { 'Batter': 0, 'Opening Batter': 0, 'Top Order Batter': 0, 'Middle Order Batter': 1, 'Batting Allrounder': 2, 'All-Rounder': 2, 'Wicket-Keeper': 2, 'Bowling Allrounder': 3, 'Bowler': 4, 'Spin Bowler': 4, 'Fast Bowler': 4 }
+  const sortByRole = (xi) => [...xi].sort((a, b) => {
+    const ra = ROLE_ORDER[a.role] ?? ROLE_ORDER[a.player_role] ?? 3
+    const rb = ROLE_ORDER[b.role] ?? ROLE_ORDER[b.player_role] ?? 3
+    return ra - rb
+  })
+
+  const activeTeam = sortByRole(activeTab === 'home' ? homeXI : awayXI)
 
   return (
   <div className="space-y-8">
