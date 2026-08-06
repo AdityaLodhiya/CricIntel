@@ -197,6 +197,18 @@ def _generate_team_xi(team_name, format_type='T20', gender='Men'):
             pred_runs = int(round(avg * (1.15 if idx < 4 else 0.7 if idx < 7 else 0.3)))
             pred_wickets = int(round(min(4, wickets / 20))) if row.get('_role_key') in ('bowler', 'allrounder') and idx >= 4 else 0
 
+            # Calculate vs_opponent
+            vs_runs = float(pd.to_numeric(row.get('runs_vs_opponent', 0), errors='coerce') or 0)
+            vs_wickets = float(pd.to_numeric(row.get('wickets_vs_opponent', 0), errors='coerce') or 0)
+            if vs_runs > 250 or vs_wickets > 12:
+                vs_opp = "Dominant"
+            elif vs_runs > 100 or vs_wickets > 5:
+                vs_opp = "Good"
+            elif vs_runs > 0 or vs_wickets > 0:
+                vs_opp = "Average"
+            else:
+                vs_opp = "N/A"
+
             xi.append({
                 "id": f"{team_name.lower()[:3]}_{idx+1}",
                 "name": str(row['player_name']),
@@ -207,7 +219,10 @@ def _generate_team_xi(team_name, format_type='T20', gender='Men'):
                 "avg": str(round(avg, 1)),
                 "sr": str(round(sr, 1)),
                 "economy": str(round(eco, 1)),
+                "ai_score": str(round(prob * 100, 1)),
                 "selectionScore": str(round(prob * 100, 1)),
+                "recent_form": "Good" if prob > 0.6 else "Average" if prob > 0.4 else "Below Avg",
+                "vs_opponent": vs_opp,
             })
 
         return xi

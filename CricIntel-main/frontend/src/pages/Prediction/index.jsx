@@ -50,15 +50,8 @@ const Prediction = () => {
     gender: matchStore.gender || 'Men'
   })
 
-  const [venues, setVenues] = useState([
-    'Wankhede Stadium, Mumbai',
-    'MCG, Melbourne',
-    "Lord's, London",
-    'M. Chinnaswamy, Bangalore'
-  ])
-  const [teams, setTeams] = useState([
-    'India', 'Australia', 'England', 'South Africa', 'New Zealand'
-  ])
+  const [venues, setVenues] = useState(null)  // null = loading
+  const [teams, setTeams] = useState(null)      // null = loading
   const [venueStats, setVenueStats] = useState(null)
 
   useEffect(() => {
@@ -66,16 +59,26 @@ const Prediction = () => {
     api.get('/venues/').then(res => {
       if (active) {
         const list = Array.isArray(res.data) ? res.data : (res.data?.results || [])
-        if (list.length > 0) setVenues(list.map(v => v.name))
+        setVenues(list.length > 0 ? list.map(v => v.name) : [])
       }
-    }).catch(() => {})
+    }).catch(() => { if (active) setVenues([]) })
     
-    // Fetch dynamic options based on the format
     api.get('/visualizations/options/', { params: { format: config.format } }).then(res => {
       if (active && res.data?.teams?.length > 0) {
-        setTeams(res.data.teams)
+        const loadedTeams = res.data.teams
+        setTeams(loadedTeams)
+        // Auto-select valid teams from the loaded list if current config values are missing
+        setConfig(prev => {
+          const homeValid = loadedTeams.includes(prev.homeTeam)
+          const awayValid = loadedTeams.includes(prev.awayTeam)
+          return {
+            ...prev,
+            homeTeam: homeValid ? prev.homeTeam : loadedTeams[0] || prev.homeTeam,
+            awayTeam: awayValid ? prev.awayTeam : (loadedTeams[1] || loadedTeams[0] || prev.awayTeam)
+          }
+        })
       }
-    }).catch(() => {})
+    }).catch(() => { if (active) setTeams(['India', 'Australia', 'England', 'South Africa', 'New Zealand', 'Pakistan', 'Sri Lanka', 'West Indies', 'Bangladesh']) })
     
     return () => { active = false }
   }, [config.format])
@@ -125,7 +128,6 @@ const Prediction = () => {
     }
   }, [matchStore.predictionData, matchStore.homeTeam, matchStore.awayTeam, matchStore.venue, matchStore.format, matchStore.gender])
 
-  // Venue data from backend or fallback defaults
   const venueData = useMemo(() => {
     if (venueStats) return {
       avg1st: venueStats.avg1stInn || 165,
@@ -133,9 +135,10 @@ const Prediction = () => {
       pace: parseInt(venueStats.paceWickets) || 55,
       spin: parseInt(venueStats.spinWickets) || 45,
       toss: venueStats.winBatFirst && parseInt(venueStats.winBatFirst) > 50 ? 'Bat First' : 'Chase Favored',
-      dew: 'Medium'
+      winBat: venueStats.winBatFirst || 'N/A',
+      winBowl: venueStats.winBowlFirst || 'N/A',
     }
-    return { avg1st: 165, avg2nd: 150, pace: 55, spin: 45, toss: 'Even', dew: 'Medium' }
+    return null  // null = still loading
   }, [venueStats])
 
   // XI suggestions derived from backend venue stats
@@ -190,6 +193,20 @@ const Prediction = () => {
         analysisData = analysisRes.data
       } catch (err) {
         console.warn('Visualization analysis endpoint error:', err)
+      }
+
+      // Extract win probabilities from the Plotly pie chart data for fallback bar rendering
+      if (analysisData?.winProbabilityPlot?.data?.[0]?.values) {
+        const pLabels = analysisData.winProbabilityPlot.data[0].labels || []
+        const pValues = analysisData.winProbabilityPlot.data[0].values || []
+        const hi = pLabels.findIndex(l => l === config.homeTeam)
+        const ai = pLabels.findIndex(l => l === config.awayTeam)
+        if (hi !== -1 && ai !== -1) {
+          predictionResult.winProbability = {
+            home: Math.round(pValues[hi]),
+            away: Math.round(pValues[ai])
+          }
+        }
       }
 
       predictionResult.analysisData = analysisData || {
@@ -270,8 +287,11 @@ const Prediction = () => {
 
  <div>
  <label className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2 block">Home Team</label>
- <select 
- value={config.homeTeam} 
+ {teams === null ? (
+   <div className="h-10 rounded-xl bg-white/5 animate-pulse border border-white/10" />
+ ) : (
+ <select
+ value={config.homeTeam}
  onChange={(e) => setConfig({...config, homeTeam: e.target.value})}
  className="glass-select w-full"
  >
@@ -279,12 +299,16 @@ const Prediction = () => {
  <option key={t} value={t} disabled={t === config.awayTeam} className="bg-surface">{t}</option>
  ))}
  </select>
+ )}
  </div>
 
  <div>
  <label className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2 block">Away Team</label>
- <select 
- value={config.awayTeam} 
+ {teams === null ? (
+   <div className="h-10 rounded-xl bg-white/5 animate-pulse border border-white/10" />
+ ) : (
+ <select
+ value={config.awayTeam}
  onChange={(e) => setConfig({...config, awayTeam: e.target.value})}
  className="glass-select w-full"
  >
@@ -292,12 +316,16 @@ const Prediction = () => {
  <option key={t} value={t} disabled={t === config.homeTeam} className="bg-surface">{t}</option>
  ))}
  </select>
+ )}
  </div>
 
  <div>
  <label className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2 block">Venue</label>
- <select 
- value={config.venue} 
+ {venues === null ? (
+   <div className="h-10 rounded-xl bg-white/5 animate-pulse border border-white/10" />
+ ) : (
+ <select
+ value={config.venue}
  onChange={(e) => setConfig({...config, venue: e.target.value})}
  className="glass-select w-full"
  >
@@ -305,6 +333,7 @@ const Prediction = () => {
  <option key={v} value={v} className="bg-surface">{v}</option>
  ))}
  </select>
+ )}
  </div>
 
  <div className="pt-4">
@@ -327,6 +356,15 @@ const Prediction = () => {
  <span className="ml-auto text-[10px] font-bold text-blue-400 bg-blue-500/10 px-2 py-1 rounded">{config.format}</span>
  </h3>
  <div className="space-y-3">
+ {venueData === null ? (
+   [1,2,3,4].map(i => (
+     <div key={i} className="flex justify-between items-center border-b border-blue-500/10 pb-2">
+       <div className="h-3 w-24 bg-white/5 rounded animate-pulse" />
+       <div className="h-3 w-12 bg-white/10 rounded animate-pulse" />
+     </div>
+   ))
+ ) : (
+   <>
  <div className="flex justify-between items-center border-b border-blue-500/10 pb-2">
  <span className="text-xs text-gray-400">Avg 1st Inn Score</span>
  <span className="text-sm font-bold text-white">{venueData.avg1st}</span>
@@ -340,13 +378,15 @@ const Prediction = () => {
  <span className="text-sm font-bold text-white">{venueData.pace}% / {venueData.spin}%</span>
  </div>
  <div className="flex justify-between items-center border-b border-blue-500/10 pb-2">
- <span className="text-xs text-gray-400">Dew Factor</span>
- <span className={`text-xs font-bold ${venueData.dew === 'High' ? 'text-yellow-400' : venueData.dew === 'Medium' ? 'text-orange-400' : 'text-gray-400'}`}>{venueData.dew}</span>
+ <span className="text-xs text-gray-400">Win Batting First</span>
+ <span className="text-xs font-bold text-green-400">{venueData.winBat}</span>
  </div>
  <div className="flex justify-between items-center">
  <span className="text-xs text-gray-400">Toss Impact</span>
  <span className={`text-xs font-bold ${venueData.toss === 'Chase Favored' ? 'text-sky-400' : 'text-blue-400'}`}>{venueData.toss}</span>
  </div>
+   </>
+ )}
  </div>
  </GlassCard>
 
@@ -405,55 +445,76 @@ const Prediction = () => {
    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
      <GlassCard className="p-4 flex flex-col h-[350px]">
        <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-2 px-2">Win Probability</h3>
-       {predictionData.analysisData?.winProbabilityPlot ? (
-         <div className="flex-1 w-full relative">
-           <Plot
-             data={predictionData.analysisData.winProbabilityPlot.data}
-             layout={{
-               ...predictionData.analysisData.winProbabilityPlot.layout,
-               autosize: true,
-             }}
-             useResizeHandler={true}
-             style={{ width: '100%', height: '100%' }}
-             config={{ displayModeBar: false }}
-           />
-         </div>
-       ) : (
-         // Fallback animated probability display when backend is offline
-         <div className="flex-1 flex flex-col justify-center px-4 space-y-6">
-           <div>
-             <div className="flex justify-between items-center mb-2">
-               <span className="text-white font-bold text-sm">{config.homeTeam}</span>
-               <span className="text-primary font-black text-xl">{predictionData.analysisData?.winProbFallback?.home ?? predictionData.winProbability?.home ?? 55}%</span>
-             </div>
-             <div className="h-3 w-full rounded-full bg-white/10 overflow-hidden">
-               <motion.div
-                 initial={{ width: 0 }}
-                 animate={{ width: `${predictionData.analysisData?.winProbFallback?.home ?? predictionData.winProbability?.home ?? 55}%` }}
-                 transition={{ duration: 1.2, ease: 'easeOut' }}
-                 className="h-full bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"
-               />
-             </div>
-           </div>
-           <div className="flex justify-center">
-             <span className="px-4 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-gray-400 uppercase tracking-widest">VS</span>
-           </div>
-           <div>
-             <div className="flex justify-between items-center mb-2">
-               <span className="text-white font-bold text-sm">{config.awayTeam}</span>
-               <span className="text-purple-400 font-black text-xl">{predictionData.analysisData?.winProbFallback?.away ?? predictionData.winProbability?.away ?? 45}%</span>
-             </div>
-             <div className="h-3 w-full rounded-full bg-white/10 overflow-hidden">
-               <motion.div
-                 initial={{ width: 0 }}
-                 animate={{ width: `${predictionData.analysisData?.winProbFallback?.away ?? predictionData.winProbability?.away ?? 45}%` }}
-                 transition={{ duration: 1.2, ease: 'easeOut', delay: 0.2 }}
-                 className="h-full bg-gradient-to-r from-purple-500 to-purple-400 rounded-full"
-               />
-             </div>
-           </div>
-         </div>
-       )}
+       {(() => {
+          // Extract real probabilities from the backend response
+          const plotData = predictionData.analysisData?.winProbabilityPlot?.data
+          
+          if (plotData?.[0]?.values) {
+            return (
+              <div className="flex-1 w-full relative h-[250px] mt-4">
+                <Plot
+                  data={predictionData.analysisData.winProbabilityPlot.data}
+                  layout={{
+                    ...predictionData.analysisData.winProbabilityPlot.layout,
+                    autosize: true,
+                    margin: { t: 0, b: 0, l: 0, r: 0 }
+                  }}
+                  useResizeHandler={true}
+                  style={{ width: '100%', height: '100%' }}
+                  config={{ displayModeBar: false }}
+                />
+              </div>
+            )
+          }
+
+          let homeProb = predictionData.winProbability?.home ?? null
+          let awayProb = predictionData.winProbability?.away ?? null
+          
+          // Ultimate AI Fallback computation
+          if (homeProb === null || awayProb === null || isNaN(homeProb) || isNaN(awayProb)) {
+            const ratings = { 'India': 1720, 'Australia': 1680, 'England': 1620, 'South Africa': 1600, 'New Zealand': 1560, 'Pakistan': 1550, 'West Indies': 1490, 'Sri Lanka': 1480, 'Bangladesh': 1440 }
+            const hr = ratings[config.homeTeam] || 1500
+            const ar = ratings[config.awayTeam] || 1500
+            const rawProb = 1.0 / (1.0 + Math.pow(10, (ar - hr) / 400.0))
+            homeProb = Math.round(rawProb * 100)
+            awayProb = 100 - homeProb
+          }
+          return (
+            <div className="flex-1 flex flex-col justify-center px-4 space-y-6 mt-4">
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-white font-bold text-sm">{config.homeTeam}</span>
+                  <span className="text-primary font-black text-2xl">{homeProb}%</span>
+                </div>
+                <div className="h-4 w-full rounded-full bg-white/10 overflow-hidden">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: `${homeProb}%` }}
+                    transition={{ duration: 1.2, ease: 'easeOut' }}
+                    className="h-full bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"
+                  />
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <span className="px-4 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-gray-400 uppercase tracking-widest">VS</span>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-white font-bold text-sm">{config.awayTeam}</span>
+                  <span className="text-purple-400 font-black text-2xl">{awayProb}%</span>
+                </div>
+                <div className="h-4 w-full rounded-full bg-white/10 overflow-hidden">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: `${awayProb}%` }}
+                    transition={{ duration: 1.2, ease: 'easeOut', delay: 0.2 }}
+                    className="h-full bg-gradient-to-r from-purple-600 to-purple-400 rounded-full"
+                  />
+                </div>
+              </div>
+            </div>
+          )
+        })()}
      </GlassCard>
 
      <GlassCard variant="purple" className="p-6 overflow-y-auto max-h-[350px] scrollbar-hide">

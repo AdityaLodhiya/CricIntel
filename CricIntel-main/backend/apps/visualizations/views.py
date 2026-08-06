@@ -127,18 +127,30 @@ class MatchupRadarView(APIView):
         if df_b.empty:
             return Response({"error": f"No players found for {team_b}"}, status=404)
 
+        # Read XI params if available
+        home_xi_param = request.query_params.get('homeXI', '')
+        away_xi_param = request.query_params.get('awayXI', '')
+        home_xi = [p.strip() for p in home_xi_param.split(',')] if home_xi_param else []
+        away_xi = [p.strip() for p in away_xi_param.split(',')] if away_xi_param else []
+
         # Best batter from team A
         batter_roles = ['Batsman', 'Top Order Batter', 'Middle Order Batter', 'Wicketkeeper',
                         'Batter', 'Allrounder', 'All-Rounder', 'Batting Allrounder']
-        df_batters = df_a[df_a['player_role'].isin(batter_roles)]
+                        
+        if home_xi:
+            df_batters = df_a[df_a['player_name'].isin(home_xi)]
+        else:
+            df_batters = df_a[df_a['player_role'].isin(batter_roles)]
+            
         if df_batters.empty:
             df_batters = df_a
 
         df_batters = df_batters.copy()
         df_batters['career_average'] = pd.to_numeric(df_batters['career_average'], errors='coerce').fillna(0)
 
+        # Force correct batter hit bypassing role constraints
         if batter_hint:
-            row = df_batters[df_batters['player_name'] == batter_hint]
+            row = df_a[df_a['player_name'] == batter_hint]
             batter_row = row.iloc[0] if not row.empty else df_batters.sort_values('career_average', ascending=False).iloc[0]
         else:
             batter_row = df_batters.sort_values('career_average', ascending=False).iloc[0]
@@ -146,7 +158,12 @@ class MatchupRadarView(APIView):
         # Best bowler from team B
         bowler_roles = ['Bowler', 'Allrounder', 'All-Rounder', 'Batting Allrounder',
                         'Bowling Allrounder', 'Spin Bowler', 'Fast Bowler']
-        df_bowlers = df_b[df_b['player_role'].isin(bowler_roles)]
+                        
+        if away_xi:
+            df_bowlers = df_b[df_b['player_name'].isin(away_xi)]
+        else:
+            df_bowlers = df_b[df_b['player_role'].isin(bowler_roles)]
+            
         if df_bowlers.empty:
             df_bowlers = df_b
 
@@ -154,8 +171,9 @@ class MatchupRadarView(APIView):
         df_bowlers['career_wickets'] = pd.to_numeric(df_bowlers['career_wickets'], errors='coerce').fillna(0)
         df_bowlers['career_economy'] = pd.to_numeric(df_bowlers['career_economy'], errors='coerce').fillna(9)
 
+        # Force correct bowler hit bypassing role constraints
         if bowler_hint:
-            row = df_bowlers[df_bowlers['player_name'] == bowler_hint]
+            row = df_b[df_b['player_name'] == bowler_hint]
             bowler_row = row.iloc[0] if not row.empty else df_bowlers[df_bowlers['career_wickets'] > 0].sort_values('career_economy').iloc[0] if (df_bowlers['career_wickets'] > 0).any() else df_bowlers.iloc[0]
         else:
             df_valid = df_bowlers[df_bowlers['career_wickets'] > 0]
@@ -165,50 +183,80 @@ class MatchupRadarView(APIView):
         bowler_name = str(bowler_row['player_name'])
 
         # ------------------------------------------------------------------ #
-        # Radar chart — batter's career metrics (0–100 normalised)
+        # Head-to-head metadata & top matchups list (Best 5)
+        # ------------------------------------------------------------------ #
+        matchups_list = []
+        idx = 1
+        
+        # Calculate Team Dominance for Match Dominance Radar
+        df_team_a = df_a.copy()
+        df_team_b = df_b.copy()
+        
+        # We estimate dominance based on team aggregated stats vs opponent
+        ta_runs = df_team_a['runs_vs_opponent'].sum()
+        ta_m = df_team_a['matches_vs_opponent'].max()
+        ta_w = df_team_a['wickets_vs_opponent'].sum()
+        
+        tb_runs = df_team_b['runs_vs_opponent'].sum()
+        tb_m = df_team_b['matches_vs_opponent'].max()
+        tb_w = df_team_b['wickets_vs_opponent'].sum()
+        
+        ta_wins = min(int(ta_m * 0.6), 15) if not pd.isna(ta_m) else 0 # Mock if exact historical wins absent
+        tb_wins = min(int(tb_m * 0.6), 15) if not pd.isna(tb_m) else 0
+
+        # Create Match Dominance Radar (Replacing old static batter radar)
+        dom_categories = ['Total Runs vs Opp', 'Wickets vs Opp', 'Avg vs Opp', 'Econ vs Opp', 'Matches vs Opp']
+        
+        def safe_mean(col):
+            return df_team_a[col].mean() if not df_team_a[col].dropna().empty else 0
+        def safe_mean_b(col):
+            return df_team_b[col].mean() if not df_team_b[col].dropna().empty else 0
+            
+        a_vals = [
+            min(100, (ta_runs / 2000) * 100), 
+            min(100, (ta_w / 100) * 100), 
+            min(100, safe_mean('average_vs_opponent') * 2), 
+            max(0, 100 - safe_mean('economy_vs_opponent') * 10),
+            min(100, (ta_m / 20) * 100) if not pd.isna(ta_m) else 0
+        ]
+        b_vals = [
+            min(100, (tb_runs / 2000) * 100), 
+            min(100, (tb_w / 100) * 100), 
+            min(100, safe_mean_b('average_vs_opponent') * 2), 
+            max(0, 100 - safe_mean_b('economy_vs_opponent') * 10),
+            min(100, (tb_m / 20) * 100) if not pd.isna(tb_m) else 0
+        ]
+        
+        df_radar = pd.DataFrame({
+            'Team A': a_vals + [a_vals[0]], 
+            'Team B': b_vals + [b_vals[0]], 
+            'theta': dom_categories + [dom_categories[0]]
+        })
+        import plotly.graph_objects as go
+        radar_fig = go.Figure()
+        radar_fig.add_trace(go.Scatterpolar(r=df_radar['Team A'], theta=df_radar['theta'], fill='toself', name=team_a, line_color='#3B82F6', fillcolor='rgba(59,130,246,0.3)'))
+        radar_fig.add_trace(go.Scatterpolar(r=df_radar['Team B'], theta=df_radar['theta'], fill='toself', name=team_b, line_color='#A855F7', fillcolor='rgba(168,85,247,0.3)'))
+        radar_fig.update_layout(
+            **_DARK_LAYOUT,
+            polar=dict(
+                radialaxis=dict(visible=False, range=[0, 100]),
+                angularaxis=dict(tickfont=dict(color='rgba(255,255,255,0.7)', size=11), gridcolor='rgba(255,255,255,0.08)'),
+                bgcolor='rgba(0,0,0,0)',
+            ),
+            showlegend=True,
+            legend=dict(orientation='h', yanchor='bottom', y=-0.2, xanchor='center', x=0.5),
+            margin=dict(l=40, r=40, t=40, b=40),
+        )
+        
+        # ------------------------------------------------------------------ #
+        # Bar chart — batter zone distribution (using available stat proxies)
         # ------------------------------------------------------------------ #
         b_avg = float(batter_row.get('career_average', 0) or 0)
         b_sr = float(batter_row.get('career_strike_rate', 0) or 0)
         b_runs = float(batter_row.get('runs_vs_opponent', 0) or 0)
         b_at_venue = float(batter_row.get('average_at_venue', 0) or 0)
         b_sr_opp = float(batter_row.get('strike_rate_vs_opponent', 0) or 0)
-
-        # Clamp to 0–100 scale for radar display
-        def _scale(val, max_val):
-            return float(min(100, round(val * 100 / max_val, 1))) if max_val else 0
-
-        radar_values = [
-            _scale(b_avg, 80),           # career average normalised out of 80
-            _scale(b_sr, 200),           # strike rate normalised out of 200 (T20 can exceed 200)
-            _scale(b_runs, 500),         # runs vs opponent normalised out of 500
-            _scale(b_at_venue, 80),      # venue average
-            _scale(b_sr_opp, 200),       # SR vs opponent
-        ]
-        categories = ['Career Avg', 'Strike Rate', 'Runs vs Opp.', 'Venue Avg', 'SR vs Opp.']
-
-        df_radar = pd.DataFrame({'r': radar_values + [radar_values[0]], 'theta': categories + [categories[0]]})
-        radar_fig = px.line_polar(df_radar, r='r', theta='theta', line_close=True)
-        radar_fig.update_traces(
-            fill='toself',
-            line_color='#00E676',
-            fillcolor='rgba(0,230,118,0.15)',
-            name=batter_name,
-        )
-        radar_fig.update_layout(
-            **_DARK_LAYOUT,
-            polar=dict(
-                radialaxis=dict(visible=True, range=[0, 100], tickfont=dict(color='rgba(255,255,255,0.4)', size=9), gridcolor='rgba(255,255,255,0.08)'),
-                angularaxis=dict(tickfont=dict(color='rgba(255,255,255,0.7)', size=11), gridcolor='rgba(255,255,255,0.08)'),
-                bgcolor='rgba(0,0,0,0)',
-            ),
-            showlegend=False,
-            margin=dict(l=40, r=40, t=40, b=40),
-        )
-
-        # ------------------------------------------------------------------ #
-        # Bar chart — batter zone distribution (using available stat proxies)
-        # ------------------------------------------------------------------ #
-        # We don't have zone data but we can show performance splits
+        
         zones = ['Vs Opponent SR', 'Career Avg', 'Venue Avg', 'Last 5 SR', 'Career SR']
         zone_vals = [
             round(b_sr_opp, 1),
@@ -226,52 +274,107 @@ class MatchupRadarView(APIView):
             margin=dict(l=120, r=20, t=20, b=20),
         )
 
-        # ------------------------------------------------------------------ #
-        # Head-to-head metadata & top matchups list
-        # ------------------------------------------------------------------ #
-        runs_val = int(batter_row.get('runs_vs_opponent', 0) or 0)
-        sr_opp_val = round(float(b_sr_opp) if b_sr_opp else float(b_sr), 1)
-        b_outs = int(float(bowler_row.get('wickets_vs_opponent', 0) or 0))
-        
-        top_batters = df_batters.sort_values('career_average', ascending=False).head(3)
-        top_bowlers = df_bowlers.sort_values('career_wickets', ascending=False).head(3)
+        # Helper for safer parsing to float
+        def safe_num(val, default=0.0):
+            return default if pd.isna(val) else float(val)
 
-        matchups_list = []
-        idx = 1
-        for _, bat in top_batters.iterrows():
-            for _, bowl in top_bowlers.iterrows():
+        # Generate pairings and rank them by combined history interaction
+        all_matchups = []
+        for _, bat in df_batters.iterrows():
+            for _, bowl in df_bowlers.iterrows():
                 b_name = str(bat['player_name'])
                 bw_name = str(bowl['player_name'])
-                r_val = int(bat.get('runs_vs_opponent', 0) or 0)
-                sr_val = float(bat.get('strike_rate_vs_opponent', 0) or bat.get('career_strike_rate', 0) or 0)
-                outs_val = int(float(bowl.get('wickets_vs_opponent', 0) or 0))
                 
-                matchups_list.append({
-                    'id': idx,
+                bat_vs_m = safe_num(bat.get('matches_vs_opponent'))
+                bowl_vs_m = safe_num(bowl.get('matches_vs_opponent'))
+                bat_runs = safe_num(bat.get('runs_vs_opponent'))
+                bowl_w = safe_num(bowl.get('wickets_vs_opponent'))
+                
+                # Interaction score logic
+                interaction_score = (bat_vs_m * bat_runs) + (bowl_vs_m * bowl_w * 20)
+                
+                r_val = int(bat_runs)
+                sr_val = safe_num(bat.get('strike_rate_vs_opponent'))
+                outs_val = int(bowl_w)
+                
+                has_history = (bat_vs_m > 0)
+                if not has_history:
+                    continue
+                
+                all_matchups.append({
+                    'id': 0,
                     'batter': b_name,
                     'batterTeam': team_a,
                     'bowler': bw_name,
                     'bowlerTeam': team_b,
                     'runs': r_val,
-                    'balls': max(0, int(r_val * 100 / max(1, sr_val))),
+                    'balls': int(r_val * 100 / sr_val) if sr_val > 0 else 0,
                     'outs': outs_val,
-                    'strikeRate': round(sr_val, 1)
+                    'strikeRate': round(sr_val, 1),
+                    'hasHistory': has_history,
+                    'score': interaction_score
                 })
-                idx += 1
-
+        
+        # Sort by interaction score
+        all_matchups.sort(key=lambda x: x['score'], reverse=True)
+        
+        # Deduplicate to ensure diversity: max 1 appearance per player in the top items if possible
+        diverse_matchups = []
+        used_bat = set()
+        used_bwl = set()
+        
+        for m in all_matchups:
+            if m['batter'] not in used_bat and m['bowler'] not in used_bwl:
+                diverse_matchups.append(m)
+                used_bat.add(m['batter'])
+                used_bwl.add(m['bowler'])
+            if len(diverse_matchups) == 5:
+                break
+                
+        # If we couldn't find 5 completely disjoint, backfill with remaining best matchups (max 2 per batter)
+        if len(diverse_matchups) < 5:
+            b_counts = {b: 1 for b in used_bat}
+            for m in all_matchups:
+                if m not in diverse_matchups:
+                    if b_counts.get(m['batter'], 0) < 2:
+                        diverse_matchups.append(m)
+                        b_counts[m['batter']] = b_counts.get(m['batter'], 0) + 1
+                    if len(diverse_matchups) == 5:
+                        break
+                        
+        # Final fallback
+        if len(diverse_matchups) < 5:
+            for m in all_matchups:
+                if m not in diverse_matchups:
+                    diverse_matchups.append(m)
+                    if len(diverse_matchups) == 5:
+                        break
+                        
+        diverse_matchups.sort(key=lambda x: x['score'], reverse=True)
+        top_matchups = diverse_matchups
+        
+        # Re-assign IDs
+        for i, m in enumerate(top_matchups):
+            m['id'] = i + 1
+            
+        # Get selected matchup metadata
+        selected_m = top_matchups[0] if top_matchups else None
+        has_metadata_history = selected_m['hasHistory'] if selected_m else False
+        
         response_data = {
             "radarPlot": json.loads(radar_fig.to_json()),
             "barPlot": json.loads(bar_fig.to_json()),
-            "matchupsList": matchups_list,
+            "matchupsList": top_matchups,
             "metadata": {
                 "batter": batter_name,
                 "batterTeam": team_a,
                 "bowler": bowler_name,
                 "bowlerTeam": team_b,
-                "runs": runs_val,
-                "balls": int(runs_val * 100 / max(1, sr_opp_val)) if sr_opp_val else 0,
-                "outs": b_outs,
-                "strikeRate": sr_opp_val,
+                "runs": selected_m['runs'] if selected_m else 0,
+                "balls": selected_m['balls'] if selected_m else 0,
+                "outs": selected_m['outs'] if selected_m else 0,
+                "strikeRate": selected_m['strikeRate'] if selected_m else 0,
+                "hasHistory": has_metadata_history,
             },
         }
         return Response(response_data)
@@ -486,7 +589,6 @@ class PredictionAnalysisView(APIView):
         )
         pie_fig.update_layout(
             **_DARK_LAYOUT,
-            font=dict(color='white', family='Space Grotesk, sans-serif'),
             showlegend=True,
             legend=dict(orientation='h', yanchor='bottom', y=-0.3, xanchor='center', x=0.5),
             margin=dict(t=40, b=0, l=0, r=0),
@@ -602,6 +704,19 @@ class VenueStatsView(APIView):
                     pace_pct, spin_pct = 58, 42
             else:
                 pace_pct, spin_pct = 58, 42
+                
+            # Team-specific match check (if teams provided)
+            team_a = request.query_params.get('teamA')
+            team_b = request.query_params.get('teamB')
+            matches_played = -1
+            if team_a and team_b and not df_v.empty:
+                t1 = df_v[df_v['player_team'] == team_a]
+                if not t1.empty:
+                    # Approximation: if we find matches at this venue for team A where opponent is team B
+                    t1_vs_t2 = t1[t1['opponent_team'] == team_b]
+                    matches_played = len(t1_vs_t2['match_id'].unique()) if 'match_id' in t1_vs_t2.columns else 0
+                else:
+                    matches_played = 0
 
             # Win batting first from toss_decision column
             toss_col = 'toss_decision' if 'toss_decision' in df_v.columns else None
@@ -623,6 +738,7 @@ class VenueStatsView(APIView):
                 "spinWickets": f"{spin_pct}%",
                 "winBatFirst": win_bat,
                 "winBowlFirst": win_bowl,
+                "matchesPlayedTeams": matches_played
             }
         })
 
