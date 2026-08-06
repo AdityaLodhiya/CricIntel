@@ -1,0 +1,13 @@
+{
+    "model_name": "cricintel_test_women_bowler",
+    "algorithm": "XGBoost Classifier",
+    "dataset_used": "final_cricket_ml_dataset_test.csv",
+    "dataset_version": "v1.0.4",
+    "training_date": "2026-07-30 23:38:45.508355",
+    "metrics": {
+        "validation_accuracy": 88.1,
+        "precision": 89.1,
+        "recall": 86.1,
+        "f1_score": 87.57
+    }
+}

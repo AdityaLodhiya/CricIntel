@@ -1,0 +1,13 @@
+{
+    "model_name": "cricintel_odi_men_bowler",
+    "algorithm": "XGBoost Classifier",
+    "dataset_used": "final_cricket_ml_dataset_odi.csv",
+    "dataset_version": "v1.0.4",
+    "training_date": "2026-07-30 23:38:40.642924",
+    "metrics": {
+        "validation_accuracy": 87.3,
+        "precision": 88.3,
+        "recall": 85.3,
+        "f1_score": 86.77
+    }
+}
