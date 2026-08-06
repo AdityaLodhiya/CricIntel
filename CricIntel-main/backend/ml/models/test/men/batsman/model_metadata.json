@@ -1,0 +1,13 @@
+{
+    "model_name": "cricintel_test_men_batsman",
+    "algorithm": "XGBoost Classifier",
+    "dataset_used": "final_cricket_ml_dataset_test.csv",
+    "dataset_version": "v1.0.4",
+    "training_date": "2026-07-30 23:38:43.459171",
+    "metrics": {
+        "validation_accuracy": 89.7,
+        "precision": 90.7,
+        "recall": 87.7,
+        "f1_score": 89.17
+    }
+}

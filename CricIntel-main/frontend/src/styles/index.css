@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-deep: #030305;
+    --bg-surface: #0A0B10;
+    --bg-elevated: #111318;
+    --neon-green: #3B82F6;
+    --neon-blue: #3B82F6;
+    --neon-purple: #8B5CF6;
+    --neon-amber: #F59E0B;
+    --neon-rose: #F43F5E;
+    --neon-cyan: #3B82F6;
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --glass-border-hover: rgba(255, 255, 255, 0.12);
+    --glass-bg: rgba(255, 255, 255, 0.03);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #27272A #030305;
+  }
+
+  body {
+    @apply bg-[#030305] text-white font-inter antialiased overflow-x-hidden;
+    background-image: 
+      radial-gradient(ellipse at 0% 0%, rgba(14,165,233,0.03) 0%, transparent 50%),
+      radial-gradient(ellipse at 100% 100%, rgba(59,130,246,0.02) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background-color: rgba(59, 130, 246, 0.3);
+    color: white;
+  }
+}
+
+@layer components {
+  /* ─── Glass Panels ─── */
+  .glass-panel {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-lg border border-white/[0.06] rounded-2xl transition-all duration-300;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  .glass-card:hover {
+    @apply border-white/[0.12] bg-white/[0.05];
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-card-static {
+    @apply bg-white/[0.03] backdrop-blur-lg border border-white/[0.06] rounded-2xl;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* ─── Glass Inputs ─── */
+  .glass-input {
+    @apply bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-white placeholder-gray-500 
+           focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/30 transition-all duration-200;
+  }
+
+  .glass-select {
+    @apply bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-white 
+           focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/30 transition-all duration-200
+           appearance-none cursor-pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 40px;
+  }
+
+  /* ─── Buttons ─── */
+  .glass-button {
+    @apply bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 hover:opacity-90 text-white font-bold rounded-xl px-6 py-3 
+           transition-all duration-300 active:scale-[0.97];
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  .glass-button:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+  }
+
+  .glass-button-secondary {
+    @apply bg-white/[0.05] hover:bg-white/[0.1] text-white font-semibold rounded-xl px-6 py-3 
+           border border-white/[0.08] hover:border-white/[0.15] transition-all duration-300 active:scale-[0.97];
+  }
+
+  /* ─── Text Utilities ─── */
+  .text-gradient-green {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#3B82F6] to-[#60A5FA];
+  }
+  .text-gradient-blue {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#3B82F6] to-[#06B6D4];
+  }
+  .text-gradient-multi {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600;
+  }
+
+  /* ─── Skeleton Loader ─── */
+  .skeleton {
+    @apply relative overflow-hidden bg-white/[0.04] rounded-lg;
+  }
+  .skeleton::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+    animation: shimmer 2s infinite linear;
+  }
+
+  /* ─── Neon Glow Effects ─── */
+  .neon-glow-green {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2), 0 0 45px rgba(59, 130, 246, 0.05);
+  }
+  .neon-glow-blue {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2), 0 0 45px rgba(59, 130, 246, 0.05);
+  }
+  .neon-glow-purple {
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.2), 0 0 45px rgba(139, 92, 246, 0.05);
+  }
+
+  /* ─── Section Heading ─── */
+  .section-label {
+    @apply text-[10px] font-bold uppercase tracking-[0.2em] text-primary/80;
+  }
+  .section-title {
+    @apply text-2xl md:text-3xl font-space font-bold text-white;
+  }
+}
+
+/* ─── Custom Scrollbar (Webkit) ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030305;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a2e;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a4e;
+}
+
+/* ─── Keyframes ─── */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ─── Print Styles ─── */
+@media print {
+  @page { margin: 10mm; }
+  body {
+    -webkit-print-color-adjust: exact;
+    background: #030305 !important;
+    color: white !important;
+  }
+  .print-hidden {
+    display: none !important;
+  }
+  .glass-card, .glass-panel {
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+}

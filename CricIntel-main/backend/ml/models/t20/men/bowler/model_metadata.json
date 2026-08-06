@@ -1,0 +1,13 @@
+{
+    "model_name": "cricintel_t20_men_bowler",
+    "algorithm": "XGBoost Classifier",
+    "dataset_used": "final_cricket_ml_dataset_t20.csv",
+    "dataset_version": "v1.0.4",
+    "training_date": "2026-07-30 23:38:37.303951",
+    "metrics": {
+        "validation_accuracy": 88.7,
+        "precision": 89.7,
+        "recall": 86.7,
+        "f1_score": 88.17
+    }
+}

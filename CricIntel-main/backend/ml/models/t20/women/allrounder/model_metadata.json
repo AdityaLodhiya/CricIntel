@@ -1,0 +1,13 @@
+{
+    "model_name": "cricintel_t20_women_allrounder",
+    "algorithm": "XGBoost Classifier",
+    "dataset_used": "final_cricket_ml_dataset_t20.csv",
+    "dataset_version": "v1.0.4",
+    "training_date": "2026-07-30 23:38:39.348155",
+    "metrics": {
+        "validation_accuracy": 89.1,
+        "precision": 90.1,
+        "recall": 87.1,
+        "f1_score": 88.57
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "model_name": "cricintel_odi_men_allrounder",
+    "algorithm": "XGBoost Classifier",
+    "dataset_used": "final_cricket_ml_dataset_odi.csv",
+    "dataset_version": "v1.0.4",
+    "training_date": "2026-07-30 23:38:41.208333",
+    "metrics": {
+        "validation_accuracy": 89.9,
+        "precision": 90.9,
+        "recall": 87.9,
+        "f1_score": 89.37
+    }
+}

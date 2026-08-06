@@ -1,0 +1,13 @@
+{
+    "model_name": "cricintel_test_women_batsman",
+    "algorithm": "XGBoost Classifier",
+    "dataset_used": "final_cricket_ml_dataset_test.csv",
+    "dataset_version": "v1.0.4",
+    "training_date": "2026-07-30 23:38:45.060967",
+    "metrics": {
+        "validation_accuracy": 87.6,
+        "precision": 88.6,
+        "recall": 85.6,
+        "f1_score": 87.07
+    }
+}

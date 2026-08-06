@@ -1,0 +1,13 @@
+{
+    "model_name": "cricintel_test_women_allrounder",
+    "algorithm": "XGBoost Classifier",
+    "dataset_used": "final_cricket_ml_dataset_test.csv",
+    "dataset_version": "v1.0.4",
+    "training_date": "2026-07-30 23:38:45.953039",
+    "metrics": {
+        "validation_accuracy": 87.8,
+        "precision": 88.8,
+        "recall": 85.8,
+        "f1_score": 87.27
+    }
+}

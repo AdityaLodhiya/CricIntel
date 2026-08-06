@@ -1,0 +1,152 @@
+import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { Mail, Lock, User } from 'lucide-react'
+import { toast } from 'react-hot-toast'
+import AnimatedInput from '@/components/ui/AnimatedInput'
+import GlowButton from '@/components/ui/GlowButton'
+import GlassCard from '@/components/ui/GlassCard'
+import api from '@/services/api'
+
+const signupSchema = z.object({
+ first_name: z.string().min(2, "First name is required"),
+ last_name: z.string().min(1, "Last name is required"),
+ email: z.string().email("Please enter a valid email address"),
+ password: z.string()
+ .min(8, "Password must be at least 8 characters")
+ .regex(/[A-Z]/, "Must contain at least one uppercase letter")
+ .regex(/[0-9]/, "Must contain at least one number")
+ .regex(/[^A-Za-z0-9]/, "Must contain at least one special character")
+})
+
+const Signup = () => {
+ const navigate = useNavigate()
+ 
+ const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm({
+ resolver: zodResolver(signupSchema)
+ })
+
+ const onSubmit = async (data) => {
+ try {
+    const response = await api.post('/auth/register/', {
+      first_name: data.first_name,
+      last_name: data.last_name,
+      email: data.email,
+      password: data.password
+    })
+    
+    toast.success(response.data?.message || 'Account created! Check your email for OTP.')
+    navigate('/verify-otp', { state: { email: data.email } })
+ } catch (error) {
+ const errData = error.response?.data
+ if (errData) {
+ if (Array.isArray(errData.email)) {
+ toast.error(errData.email[0])
+ } else if (Array.isArray(errData.password)) {
+ toast.error(errData.password[0])
+ } else if (errData.message) {
+ toast.error(errData.message)
+ } else {
+ toast.error('Signup failed. Please check your details.')
+ }
+ } else {
+ toast.error('Network error. Please try again later.')
+ }
+ }
+ }
+
+ const onInvalid = (errors) => {
+ if (errors.first_name) toast.error(errors.first_name.message)
+ else if (errors.last_name) toast.error(errors.last_name.message)
+ else if (errors.email) toast.error(errors.email.message)
+ else if (errors.password) toast.error(errors.password.message)
+ else if (errors.confirm_password) toast.error(errors.confirm_password.message)
+ }
+
+ return (
+ <div className="min-h-screen bg-background flex items-center justify-center p-4 relative overflow-hidden font-inter">
+ <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.05] mix-blend-overlay"></div>
+ <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-500/10 rounded-full blur-[150px] pointer-events-none" />
+
+ <motion.div
+ initial={{ opacity: 0, y: 20 }}
+ animate={{ opacity: 1, y: 0 }}
+ transition={{ duration: 0.5 }}
+ className="w-full max-w-[420px] relative z-10"
+ >
+ <div className="text-center mb-10">
+ <Link to="/" className="inline-flex items-center gap-2 mb-8 group">
+ <div className="relative w-10 h-10 bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 rounded-xl flex items-center justify-center ">
+ <span className="text-black font-black text-lg">C</span>
+ </div>
+ <span className="text-3xl font-space font-bold text-white tracking-tight">
+ Cric<span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 drop-shadow-[0_0_8px_rgba(59,130,246,0.4)]">Intel</span>
+ </span>
+ </Link>
+ <h2 className="text-3xl font-space font-black text-white mb-2">Create your account</h2>
+ <p className="text-gray-400 text-sm">Join the next generation of cricket analytics</p>
+ </div>
+
+ <GlassCard>
+ <form onSubmit={handleSubmit(onSubmit, onInvalid)} className="space-y-5">
+ <div className="grid grid-cols-2 gap-4">
+ <AnimatedInput
+ label="First Name"
+ type="text"
+ icon={User}
+ error={errors.first_name?.message}
+ {...register('first_name')}
+ />
+ <AnimatedInput
+ label="Last Name"
+ type="text"
+ error={errors.last_name?.message}
+ {...register('last_name')}
+ />
+ </div>
+
+ <AnimatedInput
+ label="Email Address"
+ type="email"
+ icon={Mail}
+ error={errors.email?.message}
+ {...register('email')}
+ />
+ 
+ <AnimatedInput
+ label="Password"
+ type="password"
+ icon={Lock}
+ error={errors.password?.message}
+ {...register('password')}
+ />
+
+ <p className="text-[11px] text-gray-600 leading-relaxed">
+ Must be 8+ characters with uppercase, number, and special character.
+ </p>
+
+ <GlowButton 
+ type="submit" 
+ className="w-full mt-2" 
+ isLoading={isSubmitting}
+ >
+ Create Account
+ </GlowButton>
+ </form>
+
+ <div className="mt-6 pt-6 border-t border-white/5 text-center text-sm text-gray-500">
+ Already have an account?{' '}
+ <Link to="/login" className="text-primary font-semibold hover:text-white transition-colors">
+ Sign in
+ </Link>
+ </div>
+ </GlassCard>
+ </motion.div>
+ </div>
+ )
+}
+
+export default Signup
