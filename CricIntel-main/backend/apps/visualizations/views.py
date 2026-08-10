@@ -132,52 +132,61 @@ class MatchupRadarView(APIView):
         away_xi_param = request.query_params.get('awayXI', '')
         home_xi = [p.strip() for p in home_xi_param.split(',')] if home_xi_param else []
         away_xi = [p.strip() for p in away_xi_param.split(',')] if away_xi_param else []
-
-        # Best batter from team A
-        batter_roles = ['Batsman', 'Top Order Batter', 'Middle Order Batter', 'Wicketkeeper',
-                        'Batter', 'Allrounder', 'All-Rounder', 'Batting Allrounder']
-                        
-        if home_xi:
-            df_batters = df_a[df_a['player_name'].isin(home_xi)]
-        else:
-            df_batters = df_a[df_a['player_role'].isin(batter_roles)]
+        
+        # Helper to extract exactly 1 row per player representing their stats vs target_opponent
+        def get_team_roster(team_name, opp_name, filter_xi, roles):
+            df_t = df[df['player_team'].str.lower() == team_name.lower()].copy()
+            if df_t.empty: return pd.DataFrame()
             
-        if df_batters.empty:
-            df_batters = df_a
+            if filter_xi:
+                df_t = df_t[df_t['player_name'].isin(filter_xi)]
+            else:
+                df_t = df_t[df_t['player_role'].isin(roles)]
+                
+            players = df_t['player_name'].unique()
+            rows = []
+            for p in players:
+                p_rows = df_t[df_t['player_name'] == p]
+                target_row = p_rows[p_rows['opponent_team'].str.lower() == opp_name.lower()]
+                if not target_row.empty:
+                    rows.append(target_row.iloc[0])
+                else:
+                    # Player has career stats but zero history vs opponent
+                    blank_row = p_rows.iloc[0].copy()
+                    for col in blank_row.index:
+                        if 'vs_opponent' in col:
+                            blank_row[col] = 0
+                    rows.append(blank_row)
+            return pd.DataFrame(rows)
 
-        df_batters = df_batters.copy()
-        df_batters['career_average'] = pd.to_numeric(df_batters['career_average'], errors='coerce').fillna(0)
+        # Better role assignments
+        batter_roles = ['Batsman', 'Top Order Batter', 'Middle Order Batter', 'Wicketkeeper', 'Batter', 'Allrounder', 'All-Rounder', 'Batting Allrounder']
+        bowler_roles = ['Bowler', 'Allrounder', 'All-Rounder', 'Batting Allrounder', 'Bowling Allrounder', 'Spin Bowler', 'Fast Bowler']
 
-        # Force correct batter hit bypassing role constraints
+        df_batters_a = get_team_roster(team_a, team_b, home_xi, batter_roles)
+        df_bowlers_a = get_team_roster(team_a, team_b, home_xi, bowler_roles)
+        df_batters_b = get_team_roster(team_b, team_a, away_xi, batter_roles)
+        df_bowlers_b = get_team_roster(team_b, team_a, away_xi, bowler_roles)
+
+        if df_batters_a.empty: df_batters_a = df[df['player_team'] == team_a]
+        if df_bowlers_b.empty: df_bowlers_b = df[df['player_team'] == team_b]
+
+        # Safely assign batter_row (checking if it belongs to A or B)
+        batter_row_pool = pd.concat([df_batters_a, df_batters_b]) if not df_batters_b.empty else df_batters_a
         if batter_hint:
-            row = df_a[df_a['player_name'] == batter_hint]
-            batter_row = row.iloc[0] if not row.empty else df_batters.sort_values('career_average', ascending=False).iloc[0]
+            row = batter_row_pool[batter_row_pool['player_name'] == batter_hint]
+            batter_row = row.iloc[0] if not row.empty else batter_row_pool.sort_values('career_average', ascending=False).iloc[0]
         else:
-            batter_row = df_batters.sort_values('career_average', ascending=False).iloc[0]
+            batter_row = df_batters_a.sort_values('career_average', ascending=False).iloc[0]
 
-        # Best bowler from team B
-        bowler_roles = ['Bowler', 'Allrounder', 'All-Rounder', 'Batting Allrounder',
-                        'Bowling Allrounder', 'Spin Bowler', 'Fast Bowler']
-                        
-        if away_xi:
-            df_bowlers = df_b[df_b['player_name'].isin(away_xi)]
-        else:
-            df_bowlers = df_b[df_b['player_role'].isin(bowler_roles)]
-            
-        if df_bowlers.empty:
-            df_bowlers = df_b
-
-        df_bowlers = df_bowlers.copy()
-        df_bowlers['career_wickets'] = pd.to_numeric(df_bowlers['career_wickets'], errors='coerce').fillna(0)
-        df_bowlers['career_economy'] = pd.to_numeric(df_bowlers['career_economy'], errors='coerce').fillna(9)
-
-        # Force correct bowler hit bypassing role constraints
+        # Safely assign bowler_row
+        bowler_row_pool = pd.concat([df_bowlers_b, df_bowlers_a]) if not df_bowlers_a.empty else df_bowlers_b
         if bowler_hint:
-            row = df_b[df_b['player_name'] == bowler_hint]
-            bowler_row = row.iloc[0] if not row.empty else df_bowlers[df_bowlers['career_wickets'] > 0].sort_values('career_economy').iloc[0] if (df_bowlers['career_wickets'] > 0).any() else df_bowlers.iloc[0]
+            row = bowler_row_pool[bowler_row_pool['player_name'] == bowler_hint]
+            bowler_row = row.iloc[0] if not row.empty else bowler_row_pool[bowler_row_pool['career_wickets'] > 0].sort_values('career_economy').iloc[0] if (bowler_row_pool['career_wickets'] > 0).any() else bowler_row_pool.iloc[0]
         else:
-            df_valid = df_bowlers[df_bowlers['career_wickets'] > 0]
-            bowler_row = df_valid.sort_values('career_economy').iloc[0] if not df_valid.empty else df_bowlers.iloc[0]
+            df_valid = df_bowlers_b[df_bowlers_b['career_wickets'] > 0]
+            bowler_row = df_valid.sort_values('career_economy').iloc[0] if not df_valid.empty else df_bowlers_b.iloc[0]
 
         batter_name = str(batter_row['player_name'])
         bowler_name = str(bowler_row['player_name'])
@@ -185,53 +194,47 @@ class MatchupRadarView(APIView):
         # ------------------------------------------------------------------ #
         # Head-to-head metadata & top matchups list (Best 5)
         # ------------------------------------------------------------------ #
-        matchups_list = []
-        idx = 1
-        
         # Calculate Team Dominance for Match Dominance Radar
-        df_team_a = df_a.copy()
-        df_team_b = df_b.copy()
+        ta_runs = df_batters_a['runs_vs_opponent'].sum() if not df_batters_a.empty else 0
+        ta_m = df_batters_a['matches_vs_opponent'].max() if not df_batters_a.empty else 0
+        ta_w = df_bowlers_a['wickets_vs_opponent'].sum() if not df_bowlers_a.empty else 0
         
-        # We estimate dominance based on team aggregated stats vs opponent
-        ta_runs = df_team_a['runs_vs_opponent'].sum()
-        ta_m = df_team_a['matches_vs_opponent'].max()
-        ta_w = df_team_a['wickets_vs_opponent'].sum()
+        tb_runs = df_batters_b['runs_vs_opponent'].sum() if not df_batters_b.empty else 0
+        tb_m = df_batters_b['matches_vs_opponent'].max() if not df_batters_b.empty else 0
+        tb_w = df_bowlers_b['wickets_vs_opponent'].sum() if not df_bowlers_b.empty else 0
         
-        tb_runs = df_team_b['runs_vs_opponent'].sum()
-        tb_m = df_team_b['matches_vs_opponent'].max()
-        tb_w = df_team_b['wickets_vs_opponent'].sum()
-        
-        ta_wins = min(int(ta_m * 0.6), 15) if not pd.isna(ta_m) else 0 # Mock if exact historical wins absent
-        tb_wins = min(int(tb_m * 0.6), 15) if not pd.isna(tb_m) else 0
-
-        # Create Match Dominance Radar (Replacing old static batter radar)
         dom_categories = ['Total Runs vs Opp', 'Wickets vs Opp', 'Avg vs Opp', 'Econ vs Opp', 'Matches vs Opp']
         
-        def safe_mean(col):
-            return df_team_a[col].mean() if not df_team_a[col].dropna().empty else 0
-        def safe_mean_b(col):
-            return df_team_b[col].mean() if not df_team_b[col].dropna().empty else 0
-            
-        a_vals = [
-            min(100, (ta_runs / 2000) * 100), 
-            min(100, (ta_w / 100) * 100), 
-            min(100, safe_mean('average_vs_opponent') * 2), 
-            max(0, 100 - safe_mean('economy_vs_opponent') * 10),
-            min(100, (ta_m / 20) * 100) if not pd.isna(ta_m) else 0
-        ]
-        b_vals = [
-            min(100, (tb_runs / 2000) * 100), 
-            min(100, (tb_w / 100) * 100), 
-            min(100, safe_mean_b('average_vs_opponent') * 2), 
-            max(0, 100 - safe_mean_b('economy_vs_opponent') * 10),
-            min(100, (tb_m / 20) * 100) if not pd.isna(tb_m) else 0
-        ]
-        
+        def safe_mean(col, pool):
+            if pool.empty: return 0
+            val = pd.to_numeric(pool[col], errors='coerce').replace(0, np.nan).mean()
+            return 0 if pd.isna(val) else float(val)
+
         df_radar = pd.DataFrame({
-            'Team A': a_vals + [a_vals[0]], 
-            'Team B': b_vals + [b_vals[0]], 
-            'theta': dom_categories + [dom_categories[0]]
+            'theta': dom_categories,
+            'Team A': [
+                ta_runs, 
+                ta_w, 
+                safe_mean('career_average', df_batters_a), 
+                safe_mean('career_economy', df_bowlers_a), 
+                ta_m * 2
+            ],
+            'Team B': [
+                tb_runs, 
+                tb_w, 
+                safe_mean('career_average', df_batters_b), 
+                safe_mean('career_economy', df_bowlers_b), 
+                tb_m * 2
+            ]
         })
+
+        # Min-Max scale the radar for uniform plotting bounds
+        for i in range(len(df_radar)):
+            row_max = max(df_radar.loc[i, 'Team A'], df_radar.loc[i, 'Team B'])
+            if row_max > 0:
+                df_radar.loc[i, 'Team A'] = (df_radar.loc[i, 'Team A'] / row_max) * 100
+                df_radar.loc[i, 'Team B'] = (df_radar.loc[i, 'Team B'] / row_max) * 100
+
         import plotly.graph_objects as go
         radar_fig = go.Figure()
         radar_fig.add_trace(go.Scatterpolar(r=df_radar['Team A'], theta=df_radar['theta'], fill='toself', name=team_a, line_color='#3B82F6', fillcolor='rgba(59,130,246,0.3)'))
@@ -278,42 +281,50 @@ class MatchupRadarView(APIView):
         def safe_num(val, default=0.0):
             return default if pd.isna(val) else float(val)
 
-        # Generate pairings and rank them by combined history interaction
+        # Generate bidirectional pairings
         all_matchups = []
-        for _, bat in df_batters.iterrows():
-            for _, bowl in df_bowlers.iterrows():
-                b_name = str(bat['player_name'])
-                bw_name = str(bowl['player_name'])
-                
-                bat_vs_m = safe_num(bat.get('matches_vs_opponent'))
-                bowl_vs_m = safe_num(bowl.get('matches_vs_opponent'))
-                bat_runs = safe_num(bat.get('runs_vs_opponent'))
-                bowl_w = safe_num(bowl.get('wickets_vs_opponent'))
-                
-                # Interaction score logic
-                interaction_score = (bat_vs_m * bat_runs) + (bowl_vs_m * bowl_w * 20)
-                
-                r_val = int(bat_runs)
-                sr_val = safe_num(bat.get('strike_rate_vs_opponent'))
-                outs_val = int(bowl_w)
-                
-                has_history = (bat_vs_m > 0)
-                if not has_history:
-                    continue
-                
-                all_matchups.append({
-                    'id': 0,
-                    'batter': b_name,
-                    'batterTeam': team_a,
-                    'bowler': bw_name,
-                    'bowlerTeam': team_b,
-                    'runs': r_val,
-                    'balls': int(r_val * 100 / sr_val) if sr_val > 0 else 0,
-                    'outs': outs_val,
-                    'strikeRate': round(sr_val, 1),
-                    'hasHistory': has_history,
-                    'score': interaction_score
-                })
+        
+        def build_matchups(bat_pool, bowl_pool, t_bat, t_bowl):
+            for _, bat in bat_pool.iterrows():
+                for _, bowl in bowl_pool.iterrows():
+                    b_name = str(bat['player_name'])
+                    bw_name = str(bowl['player_name'])
+                    
+                    bat_vs_m = safe_num(bat.get('matches_vs_opponent'))
+                    bowl_vs_m = safe_num(bowl.get('matches_vs_opponent'))
+                    bat_runs = safe_num(bat.get('runs_vs_opponent'))
+                    bowl_w = safe_num(bowl.get('wickets_vs_opponent'))
+                    
+                    interaction_score = (bat_vs_m * bat_runs) + (bowl_vs_m * bowl_w * 20)
+                    r_val = int(bat_runs)
+                    sr_val = safe_num(bat.get('strike_rate_vs_opponent'))
+                    outs_val = int(bowl_w)
+                    
+                    has_history = (bat_vs_m > 0) and (bat_runs > 0 or bowl_w > 0)
+                    if not has_history:
+                        continue
+                    
+                    all_matchups.append({
+                        'id': 0,
+                        'batter': b_name,
+                        'batterTeam': t_bat,
+                        'bowler': bw_name,
+                        'bowlerTeam': t_bowl,
+                        'runs': r_val,
+                        'balls': int(r_val * 100 / sr_val) if sr_val > 0 else 0,
+                        'outs': outs_val,
+                        'strikeRate': round(sr_val, 1),
+                        'hasHistory': has_history,
+                        'score': interaction_score
+                    })
+                    
+        # Direction 1: Team A batting vs Team B bowling
+        if not df_batters_a.empty and not df_bowlers_b.empty:
+            build_matchups(df_batters_a, df_bowlers_b, team_a, team_b)
+            
+        # Direction 2: Team B batting vs Team A bowling
+        if not df_batters_b.empty and not df_bowlers_a.empty:
+            build_matchups(df_batters_b, df_bowlers_a, team_b, team_a)
         
         # Sort by interaction score
         all_matchups.sort(key=lambda x: x['score'], reverse=True)
@@ -357,8 +368,17 @@ class MatchupRadarView(APIView):
         for i, m in enumerate(top_matchups):
             m['id'] = i + 1
             
-        # Get selected matchup metadata
-        selected_m = top_matchups[0] if top_matchups else None
+        # Get selected matchup metadata (Force match to requested hints)
+        selected_m = None
+        for m in all_matchups:
+            if m['batter'] == batter_name and m['bowler'] == bowler_name:
+                selected_m = m
+                break
+                
+        # If not found (e.g. they literally have no history OR were not in the pool somehow), fallback to top_matchups[0], but safely
+        if not selected_m:
+            selected_m = top_matchups[0] if top_matchups else None
+            
         has_metadata_history = selected_m['hasHistory'] if selected_m else False
         
         response_data = {
@@ -477,9 +497,58 @@ class AnalyticsView(APIView):
             margin=dict(l=100, r=20, t=40, b=40),
         )
 
+        # ------------------------------------------------------------------ #
+        # KPIs based on Production Dataset
+        # ------------------------------------------------------------------ #
+        # 1. Global Avg Strike Rate (Batters only to avoid tail-enders skewing it)
+        sr = pd.to_numeric(df_batters['career_strike_rate'], errors='coerce')
+        sr = sr[(sr > 50) & (sr < 250)]
+        global_sr = round(sr.mean(), 1) if not sr.empty else 0
+
+        # 2. Avg 1st Inn Score equivalent (using mean average * 5.5)
+        avg = pd.to_numeric(df_batters['career_average'], errors='coerce')
+        avg = avg[avg > 5]
+        mean_avg = avg.mean() if not avg.empty else 30
+        
+        # Scale according to format dynamics
+        if format_type.upper() == 'T20':
+            avg_1st = int(mean_avg * 6.5) # higher tempo
+        elif format_type.upper() == 'ODI':
+            avg_1st = int(mean_avg * 9)
+        else:
+            avg_1st = int(mean_avg * 11)
+
+        # 3. Pace vs Spin
+        bowl_styles = df_filtered['bowling_style'].dropna().str.lower()
+        pace_wkts = df_filtered[bowl_styles.str.contains('fast|medium|pace|seam|swing', na=False)]['career_wickets']
+        spin_wkts = df_filtered[bowl_styles.str.contains('spin|off|leg|turn|slow', na=False)]['career_wickets']
+        
+        pace_tot = pd.to_numeric(pace_wkts, errors='coerce').sum()
+        spin_tot = pd.to_numeric(spin_wkts, errors='coerce').sum()
+        tot = pace_tot + spin_tot
+        
+        if tot > 0:
+            pace_pct = int(round((pace_tot / tot) * 100))
+            spin_pct = 100 - pace_pct
+            pace_spin_label = f"{pace_pct}:{spin_pct}"
+        else:
+            pace_spin_label = "60:40"
+            
+        # 4. Matches Tracked (from match_id)
+        if 'match_id' in df_filtered.columns:
+            matches_tracked = f"{df_filtered['match_id'].nunique():,}"
+        else:
+            matches_tracked = "2,500+"
+
         return Response({
             "trendPlot": json.loads(trend_fig.to_json()),
             "heatmapPlot": json.loads(heat_fig.to_json()),
+            "kpi": {
+                "sr": str(global_sr),
+                "score": str(avg_1st),
+                "paceSpinLabel": pace_spin_label,
+                "matches": matches_tracked
+            }
         })
 
 
@@ -682,13 +751,25 @@ class VenueStatsView(APIView):
             win_bat = "52%"
             win_bowl = "48%"
         else:
-            # Calculate mean runs at venue
+            # Calculate mean runs at venue (player-level career average approximation)
             mean_runs = df_v['runs_at_venue'].replace(0, np.nan).mean()
             if pd.isna(mean_runs) or mean_runs == 0:
-                mean_runs = 165 if format_type == 'T20' else 275 if format_type == 'ODI' else 340
-            
-            avg_1st = int(round(mean_runs * (1.1 if format_type == 'T20' else 1.05)))
-            avg_2nd = int(round(mean_runs * 0.95))
+                base = 165 if format_type == 'T20' else 275 if format_type == 'ODI' else 340
+                team_total_approx = base
+            else:
+                # Project player average to team innings score (~ 5.5 viable batting positions)
+                team_total_approx = mean_runs * 5.5
+                
+                # Constrain to realistic format boundaries
+                if format_type == 'T20':
+                    team_total_approx = max(130, min(team_total_approx, 220))
+                elif format_type == 'ODI':
+                    team_total_approx = max(200, min(team_total_approx, 360))
+                else:
+                    team_total_approx = max(220, min(team_total_approx, 450))
+                    
+            avg_1st = int(round(team_total_approx * (1.05 if format_type == 'T20' else 1.05)))
+            avg_2nd = int(round(team_total_approx * 0.95))
             
             # Pace vs Spin estimation from bowling styles at venue
             bowl_styles = df_v['bowling_style'].dropna().str.lower()
@@ -719,12 +800,19 @@ class VenueStatsView(APIView):
                     matches_played = 0
 
             # Win batting first from toss_decision column
+            # Deduplicate to 1 row per match to avoid inflated player-row counts
             toss_col = 'toss_decision' if 'toss_decision' in df_v.columns else None
-            if toss_col:
+            if toss_col and 'match_id' in df_v.columns:
+                df_matches = df_v.drop_duplicates(subset='match_id')[toss_col].dropna().str.lower()
+                bat_first = df_matches.str.contains('bat', na=False).sum()
+                total_toss = len(df_matches)
+                win_bat = f"{int(round((bat_first / total_toss) * 100)) if total_toss > 0 else 52}%"
+                win_bowl = f"{100 - int(win_bat.replace('%', ''))}%"
+            elif toss_col:
                 bat_first = df_v[toss_col].str.lower().str.contains('bat', na=False).sum()
                 total_toss = len(df_v[toss_col].dropna())
                 win_bat = f"{int(round((bat_first / total_toss) * 100)) if total_toss > 0 else 52}%"
-                win_bowl = f"{100 - int(win_bat.replace('%',''))}%"
+                win_bowl = f"{100 - int(win_bat.replace('%', ''))}%"
             else:
                 win_bat, win_bowl = "52%", "48%"
 

@@ -7,6 +7,31 @@ import EmptyState from '@/components/ui/EmptyState'
 import { useNavigate } from 'react-router-dom'
 import { useMatchStore } from '@/store/matchStore'
 import api from '@/services/api'
+import { getFlagUrl } from '@/utils/constants'
+
+const SkeletonCard = () => (
+  <GlassCard className="p-6 relative overflow-hidden">
+    <div className="flex justify-between items-center mb-6">
+      <div className="h-5 w-24 bg-white/10 rounded-full animate-pulse"></div>
+      <div className="h-4 w-20 bg-white/5 rounded animate-pulse"></div>
+    </div>
+    <div className="flex items-center justify-between my-4 px-2">
+      <div className="flex flex-col items-center flex-1 space-y-2">
+        <div className="w-10 h-6 bg-white/10 rounded animate-pulse"></div>
+        <div className="h-6 w-24 bg-white/10 rounded animate-pulse"></div>
+      </div>
+      <div className="px-4 text-xs font-bold text-gray-700 uppercase tracking-wider">VS</div>
+      <div className="flex flex-col items-center flex-1 space-y-2">
+        <div className="w-10 h-6 bg-white/10 rounded animate-pulse"></div>
+        <div className="h-6 w-24 bg-white/10 rounded animate-pulse"></div>
+      </div>
+    </div>
+    <div className="pt-4 border-t border-white/5 flex items-center justify-between mt-4">
+      <div className="h-4 w-32 bg-white/10 rounded animate-pulse"></div>
+      <div className="h-8 w-24 bg-white/10 rounded-xl animate-pulse"></div>
+    </div>
+  </GlassCard>
+)
 
 const Fixtures = () => {
   const navigate = useNavigate()
@@ -39,6 +64,14 @@ const Fixtures = () => {
     navigate('/app/prediction')
   }
 
+  // Helper to format date nicely
+  const formatDate = (dateStr) => {
+    if (!dateStr) return 'TBA'
+    return new Date(dateStr).toLocaleDateString('en-GB', { 
+      day: 'numeric', month: 'short', year: 'numeric' 
+    })
+  }
+
   return (
     <div className="pb-20 font-inter space-y-8">
       <PageHeader 
@@ -51,34 +84,46 @@ const Fixtures = () => {
       />
 
       {loading ? (
-        <div className="p-12 text-center text-gray-500 font-bold uppercase tracking-widest text-sm">
-          Loading Fixtures...
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[...Array(6)].map((_, i) => (
+            <SkeletonCard key={i} />
+          ))}
         </div>
       ) : fixtures.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {fixtures.map(match => (
-            <GlassCard key={match.id} className="p-6 relative overflow-hidden group hover:border-primary/40 transition-all">
+            <GlassCard key={match.id} className="p-6 relative overflow-hidden group hover:border-primary/40 transition-all shadow-lg hover:shadow-primary/5">
               <div className="flex justify-between items-center mb-6">
                 <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary">
-                  {match.format} Series
+                  {match.format === 'T20' ? 'T20' : match.format} Match
                 </span>
                 <span className="text-xs text-gray-400 font-medium flex items-center gap-1.5">
-                  <Calendar size={13} /> {match.date}
+                  <Calendar size={13} /> {formatDate(match.date)}
                 </span>
               </div>
-
-              <div className="flex items-center justify-between my-4 px-2">
-                <div className="text-center flex-1">
-                  <p className="text-xl font-space font-black text-white">{match.home_team}</p>
+              
+              {match.tournament && (
+                <div className="text-center mb-4">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 truncate flex justify-center items-center gap-1">
+                    <Trophy size={11} className="text-yellow-500/70" /> {match.tournament}
+                  </p>
                 </div>
-                <div className="px-4 text-xs font-bold text-gray-500 uppercase tracking-wider">VS</div>
-                <div className="text-center flex-1">
-                  <p className="text-xl font-space font-black text-white">{match.away_team}</p>
+              )}
+
+              <div className="flex items-center justify-between my-2 px-1">
+                <div className="text-center flex-1 flex flex-col items-center">
+                  <img src={getFlagUrl(match.home_team)} alt={match.home_team} className="w-8 h-5.5 rounded object-cover mb-2 shadow-sm" onError={(e) => { e.target.style.display = 'none' }} />
+                  <p className="text-sm font-space font-black text-white px-1 leading-tight">{match.home_team}</p>
+                </div>
+                <div className="px-3 text-[10px] font-bold text-gray-600 uppercase tracking-wider">VS</div>
+                <div className="text-center flex-1 flex flex-col items-center">
+                  <img src={getFlagUrl(match.away_team)} alt={match.away_team} className="w-8 h-5.5 rounded object-cover mb-2 shadow-sm" onError={(e) => { e.target.style.display = 'none' }} />
+                  <p className="text-sm font-space font-black text-white px-1 leading-tight">{match.away_team}</p>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/5 flex items-center justify-between mt-4">
-                <p className="text-xs text-gray-400 flex items-center gap-1.5 truncate max-w-[220px]">
+              <div className="pt-4 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between mt-5 gap-4">
+                <p className="text-xs text-gray-400 flex items-center gap-1.5 truncate max-w-[200px]" title={match.venue}>
                   <MapPin size={13} className="shrink-0 text-gray-500" />
                   <span className="truncate">{match.venue}</span>
                 </p>
@@ -86,9 +131,9 @@ const Fixtures = () => {
                 <GlowButton 
                   onClick={() => handlePredictFixture(match)}
                   size="sm" 
-                  className="rounded-xl text-xs py-2 px-4"
+                  className="rounded-xl text-xs py-1.5 px-3 whitespace-nowrap shrink-0"
                 >
-                  <Zap size={14} /> Predict XI
+                  <Zap size={13} /> Predict XI
                 </GlowButton>
               </div>
             </GlassCard>
@@ -98,7 +143,7 @@ const Fixtures = () => {
         <EmptyState 
           icon={Calendar}
           title="No Fixtures Found"
-          description="Fetching the latest ICC and Bilateral fixture list."
+          description="Fetching the latest ICC and Bilateral fixture list from datasets."
         />
       )}
     </div>

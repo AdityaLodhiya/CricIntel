@@ -267,8 +267,8 @@ const Dashboard = () => {
         </GlassCard>
       </div>
     </div>
- </div>
- )
+  </div>
+  )
 }
 
 export default Dashboard

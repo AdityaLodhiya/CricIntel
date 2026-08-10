@@ -47,19 +47,49 @@ class MatchViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['get'])
     def upcoming(self, request):
-        """Returns upcoming scheduled matches for global series."""
-        queryset = self.get_queryset().filter(status='SCH')
-        if queryset.exists():
-            serializer = self.get_serializer(queryset, many=True)
-            return Response({'status': 'success', 'results': serializer.data})
-        
-        # Schedule fixtures list
-        fixtures = [
-            {'id': 1, 'home_team': 'India', 'away_team': 'Australia', 'format': 'T20', 'venue': 'Wankhede Stadium, Mumbai', 'date': '2026-08-05', 'status': 'Upcoming'},
-            {'id': 2, 'home_team': 'England', 'away_team': 'South Africa', 'format': 'ODI', 'venue': "Lord's, London", 'date': '2026-08-08', 'status': 'Upcoming'},
-            {'id': 3, 'home_team': 'Australia', 'away_team': 'India', 'format': 'Test', 'venue': 'MCG, Melbourne', 'date': '2026-08-12', 'status': 'Upcoming'},
-            {'id': 4, 'home_team': 'New Zealand', 'away_team': 'Pakistan', 'format': 'T20', 'venue': 'Eden Park, Auckland', 'date': '2026-08-15', 'status': 'Upcoming'},
-        ]
+        """Returns upcoming scheduled (or recent) matches from synthetic global series."""
+        try:
+            from ml.config.settings import BASE_DIR
+            import pandas as pd
+            import random
+            
+            synthetic_dir = BASE_DIR.parent.parent / 'Dataset'
+            file_paths = [
+                synthetic_dir / 'T20_Synthetic.csv',
+                synthetic_dir / 'ODI_Synthetic.csv',
+                synthetic_dir / 'TEST_Synthetic.csv'
+            ]
+            
+            all_matches = []
+            
+            for path in file_paths:
+                if path.exists() and path.stat().st_size > 1000:
+                    df = pd.read_csv(path, usecols=['match_id', 'match_date', 'player_team', 'opponent_team', 'venue_name', 'match_type', 'tournament_name'], low_memory=False)
+                    # Deduplicate by match_id
+                    unique_matches = df.drop_duplicates(subset=['match_id']).sort_values('match_date', ascending=False).head(8)
+                    for col in unique_matches.columns:
+                        unique_matches[col] = unique_matches[col].fillna('')
+                    
+                    for _, row in unique_matches.iterrows():
+                        all_matches.append({
+                            'id': str(row['match_id']),
+                            'home_team': str(row['player_team']),
+                            'away_team': str(row['opponent_team']),
+                            'format': str(row['match_type']),
+                            'venue': str(row['venue_name']),
+                            'date': str(row['match_date']),
+                            'tournament': str(row.get('tournament_name', '')),
+                            'status': 'Upcoming'
+                        })
+            
+            # Sort by date descending and take top 12
+            all_matches.sort(key=lambda x: x['date'], reverse=True)
+            fixtures = all_matches[:12]
+            
+        except Exception as e:
+            print("Error loading synthetic fixtures:", e)
+            fixtures = []
+
         return Response({
             'status': 'success',
             'count': len(fixtures),
