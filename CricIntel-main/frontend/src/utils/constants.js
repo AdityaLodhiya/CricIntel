@@ -12,14 +12,13 @@ export const OPPONENTS = [
 
 /**
  * Format a date string for display.
- * TODO: Add timezone support for match dates.
  */
 export function formatDate(dateString) {
  if (!dateString) return '';
  return new Date(dateString).toLocaleDateString('en-IN', {
- year: 'numeric',
- month: 'long',
- day: 'numeric',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
  });
 }
 
@@ -33,11 +32,15 @@ export function formatPercentage(value) {
 
 /**
  * Get country flag URL from flagcdn.
+ * Returns ICC logo placeholder for unmapped countries — never India's flag.
  */
 export function getFlagUrl(country) {
-  if (!country) return 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Missing_flag.png';
-  // Normalize country name (remove " Men", " Women", "(Men)", "(Women)", etc.)
-  const cleanCountry = country.replace(/\s*(Men|Women)\s*/i, '').replace(/\(\s*(Men|Women)\s*\)/i, '').trim();
+  if (!country) return 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/International_Cricket_Council_logo.svg/200px-International_Cricket_Council_logo.svg.png';
+  // Normalize: remove " Men", " Women", "(Men)", "(Women)" suffixes
+  const cleanCountry = country
+    .replace(/\s*(Men|Women)\s*/gi, '')
+    .replace(/\(\s*(Men|Women)\s*\)/gi, '')
+    .trim();
 
   const codes = {
     'India': 'in',
@@ -47,7 +50,7 @@ export function getFlagUrl(country) {
     'South Africa': 'za',
     'Pakistan': 'pk',
     'Sri Lanka': 'lk',
-    'West Indies': 'jm', // Jamaica as a proxy, or an ICC flag, but jm is commonly used here as placeholder
+    'West Indies': 'jm',
     'Bangladesh': 'bd',
     'Afghanistan': 'af',
     'Ireland': 'ie',
@@ -61,13 +64,74 @@ export function getFlagUrl(country) {
     'Namibia': 'na',
     'USA': 'us',
     'United States': 'us',
+    'United States of America': 'us',
     'Papua New Guinea': 'pg',
     'Uganda': 'ug',
+    'Canada': 'ca',
+    'Kenya': 'ke',
+    'Nigeria': 'ng',
+    'Tanzania': 'tz',
+    'Malaysia': 'my',
+    'Singapore': 'sg',
+    'Bermuda': 'bm',
+    'Bahrain': 'bh',
+    'Kuwait': 'kw',
+    'Qatar': 'qa',
+    'Saudi Arabia': 'sa',
+    'Hong Kong': 'hk',
+    'China': 'cn',
+    'Japan': 'jp',
+    'South Korea': 'kr',
+    'Thailand': 'th',
+    'Indonesia': 'id',
+    'Philippines': 'ph',
+    'Vanuatu': 'vu',
+    'Samoa': 'ws',
+    'Fiji': 'fj',
+    'Argentina': 'ar',
+    'Brazil': 'br',
+    'Chile': 'cl',
+    'Peru': 'pe',
+    'Mexico': 'mx',
+    'Cayman Islands': 'ky',
+    'Belize': 'bz',
+    'Bahamas': 'bs',
+    'Barbados': 'bb',
+    'Germany': 'de',
+    'France': 'fr',
+    'Spain': 'es',
+    'Italy': 'it',
+    'Denmark': 'dk',
+    'Sweden': 'se',
+    'Norway': 'no',
+    'Austria': 'at',
+    'Belgium': 'be',
+    'Portugal': 'pt',
+    'Switzerland': 'ch',
+    'Romania': 'ro',
+    'Bulgaria': 'bg',
+    'Czech Republic': 'cz',
+    'Greece': 'gr',
+    'Botswana': 'bw',
+    'Ghana': 'gh',
+    'Rwanda': 'rw',
+    'Mozambique': 'mz',
+    'Cameroon': 'cm',
+    'Zambia': 'zm',
+    'Malawi': 'mw',
+    'Sierra Leone': 'sl',
+    'Gambia': 'gm',
+    'Seychelles': 'sc',
+    'Bhutan': 'bt',
+    'Maldives': 'mv',
+    'Cambodia': 'kh',
+    'Myanmar': 'mm',
   };
+
   const code = codes[cleanCountry];
   if (!code) {
-    // Neutral placeholder
-    return 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Missing_flag.png';
+    // ICC logo placeholder — NOT India's flag
+    return 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/International_Cricket_Council_logo.svg/200px-International_Cricket_Council_logo.svg.png';
   }
   return `https://flagcdn.com/w160/${code}.png`;
 }

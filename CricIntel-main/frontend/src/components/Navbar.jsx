@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { 
  LayoutDashboard, Zap, MapPin, Users, BarChart3, 
  Calendar, LogOut, Menu, X, ChevronDown, Bell,
- User, Info, Swords
+ User, Info, Swords, MessageSquare
 } from 'lucide-react'
 import { useAuthStore } from '@/store/authStore'
 import { cn } from '@/utils/cn'
@@ -17,6 +17,7 @@ const navItems = [
  { to: '/app/venues', label: 'Venues', icon: MapPin },
  { to: '/app/fixtures', label: 'Fixtures', icon: Calendar },
  { to: '/app/analytics', label: 'Analytics', icon: BarChart3 },
+ { to: '/app/feedback', label: 'Feedback', icon: MessageSquare },
  { to: '/app/about', label: 'About', icon: Info },
 ]
 
@@ -81,11 +82,7 @@ const Navbar = () => {
  <div className="flex items-center gap-4">
  {isAuthenticated ? (
  <>
- {/* Notifications */}
- <button className="relative p-2 rounded-xl bg-white/[0.02] border border-white/[0.04] text-gray-400 hover:text-white hover:bg-white/[0.05] transition-all">
- <Bell size={18} />
- <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-primary rounded-full shadow-[0_0_8px_rgba(59,130,246,0.8)] animate-pulse"></span>
- </button>
+ 
 
  {/* Profile Dropdown */}
  <div className="relative">

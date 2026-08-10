@@ -1,0 +1,2375 @@
+INFO 2026-07-30 16:01:51,539 autoreload Watching for file changes with StatReloader
+WARNING 2026-07-30 16:03:26,844 log Not Found: /favicon.ico
+ERROR 2026-07-30 16:04:03,124 views Failed to send OTP email to adityalodhiya111@gmail.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-31504dd42a9sm23689842eec.30 - gsmtp', 'CricIntel <noreply@cricintel.com>')
+INFO 2026-07-30 16:16:42,397 autoreload Watching for file changes with StatReloader
+WARNING 2026-07-30 16:18:01,191 log Bad Request: /api/auth/register/
+INFO 2026-07-30 16:29:38,274 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 16:31:04,922 views Nodemailer dispatch output: [NODEMAILER_SUCCESS] OTP sent to adityalodhiya409@gmail.com (MessageID: <1043c402-b97e-b86c-ead2-65b4846c019b@cricintel.com>)
+[OTP_CODE] 120812
+
+INFO 2026-07-30 16:33:29,249 views Nodemailer dispatch output: [NODEMAILER_SUCCESS] OTP sent to adityalodhiya409@gmail.com (MessageID: <837412ba-62f6-70ff-4984-d75b33a35797@cricintel.com>)
+[OTP_CODE] 631804
+
+WARNING 2026-07-30 16:34:48,711 log Bad Request: /api/auth/verify-otp/
+ERROR 2026-07-30 16:35:04,054 log Internal Server Error: /api/players/
+ERROR 2026-07-30 16:35:04,078 log Internal Server Error: /api/players/
+WARNING 2026-07-30 16:36:18,745 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-30 16:36:53,576 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-30 16:38:07,174 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-30 16:38:10,152 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 16:38:10,505 log Not Found: /api/visualizations/matchup-radar/
+ERROR 2026-07-30 16:38:29,032 log Internal Server Error: /api/players/
+ERROR 2026-07-30 16:38:29,095 log Internal Server Error: /api/players/
+ERROR 2026-07-30 16:38:29,390 log Internal Server Error: /api/players/
+ERROR 2026-07-30 16:38:29,473 log Internal Server Error: /api/players/
+WARNING 2026-07-30 16:38:52,402 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 16:38:53,247 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 16:38:55,324 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 16:38:55,336 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 16:38:55,631 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 16:38:55,642 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 16:38:59,158 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 16:38:59,170 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 16:38:59,465 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 16:38:59,474 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 16:39:16,382 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 16:39:16,405 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 16:39:17,537 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 16:39:17,547 log Not Found: /api/visualizations/analytics/
+INFO 2026-07-30 16:52:32,382 autoreload Watching for file changes with StatReloader
+ERROR 2026-07-30 16:52:46,586 log Internal Server Error: /api/players/
+ERROR 2026-07-30 16:52:46,617 log Internal Server Error: /api/players/
+WARNING 2026-07-30 16:53:15,022 log Not Found: /api/visualizations/prediction-analysis/
+ERROR 2026-07-30 16:53:23,324 log Internal Server Error: /api/players/
+ERROR 2026-07-30 16:53:23,369 log Internal Server Error: /api/players/
+INFO 2026-07-30 22:12:34,479 autoreload Watching for file changes with StatReloader
+WARNING 2026-07-30 22:13:52,118 log Unauthorized: /api/predict/
+WARNING 2026-07-30 22:13:52,120 log Unauthorized: /api/venues/
+WARNING 2026-07-30 22:13:52,120 log Unauthorized: /api/players/
+WARNING 2026-07-30 22:13:52,120 log Unauthorized: /api/matches/
+WARNING 2026-07-30 22:13:52,152 log Unauthorized: /api/predict/
+WARNING 2026-07-30 22:13:52,156 log Unauthorized: /api/players/
+WARNING 2026-07-30 22:13:52,163 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-30 22:13:52,158 log Unauthorized: /api/venues/
+WARNING 2026-07-30 22:13:52,168 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-30 22:13:52,162 log Unauthorized: /api/matches/
+WARNING 2026-07-30 22:13:52,166 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-30 22:13:52,176 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-30 22:13:52,173 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-30 22:13:52,182 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-30 22:13:52,187 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-30 22:13:52,191 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-30 22:13:52,214 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-30 22:13:52,215 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-30 22:13:52,218 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-30 22:13:52,219 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-30 22:13:52,222 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-30 22:13:52,224 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-30 22:14:00,195 log Not Found: /favicon.ico
+INFO 2026-07-30 22:15:15,527 views Nodemailer dispatch output: [NODEMAILER_SUCCESS] OTP sent to sekhdazeel@gmail.com (MessageID: <3b64272f-0806-262d-3080-b5ce8e382efc@cricintel.com>)
+[OTP_CODE] 259765
+
+INFO 2026-07-30 22:16:19,961 views Nodemailer dispatch output: [NODEMAILER_SUCCESS] OTP sent to shekhadazeel@gmail.com (MessageID: <aab700b2-0c7b-c8c0-0668-44a8a0f996f2@cricintel.com>)
+[OTP_CODE] 812584
+
+WARNING 2026-07-30 22:17:33,000 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:17:33,012 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:17:37,905 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:17:37,920 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:17:38,211 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:17:38,222 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:17:40,854 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:17:41,090 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:17:49,688 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:17:49,736 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:17:49,761 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:17:49,776 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:17:50,000 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:17:50,011 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:17:50,024 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:17:50,036 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:17:55,886 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:17:55,900 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:17:56,205 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:17:56,248 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:17:57,627 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:17:57,640 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:17:57,932 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:17:57,944 log Not Found: /api/visualizations/matchup-radar/
+INFO 2026-07-30 22:27:44,983 autoreload D:\CrickIntel\CricIntel-main\backend\apps\players\views.py changed, reloading.
+INFO 2026-07-30 22:27:48,456 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 22:27:55,192 autoreload D:\CrickIntel\CricIntel-main\backend\apps\venues\views.py changed, reloading.
+INFO 2026-07-30 22:27:57,056 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 22:29:19,137 autoreload D:\CrickIntel\CricIntel-main\backend\apps\matches\views.py changed, reloading.
+INFO 2026-07-30 22:29:21,243 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 22:30:27,259 autoreload D:\CrickIntel\CricIntel-main\backend\apps\venues\views.py changed, reloading.
+INFO 2026-07-30 22:30:29,148 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 22:31:10,541 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-07-30 22:31:12,606 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 22:36:13,085 autoreload D:\CrickIntel\CricIntel-main\backend\apps\players\views.py changed, reloading.
+INFO 2026-07-30 22:36:15,459 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 22:36:28,987 autoreload D:\CrickIntel\CricIntel-main\backend\apps\players\views.py changed, reloading.
+INFO 2026-07-30 22:36:30,599 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 22:37:12,190 autoreload D:\CrickIntel\CricIntel-main\backend\apps\players\views.py changed, reloading.
+INFO 2026-07-30 22:37:13,917 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 22:37:49,694 autoreload D:\CrickIntel\CricIntel-main\backend\apps\predictions\views.py changed, reloading.
+INFO 2026-07-30 22:37:51,499 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 22:38:18,101 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-07-30 22:38:19,850 autoreload Watching for file changes with StatReloader
+WARNING 2026-07-30 22:41:52,263 log Not Found: /api/players/
+WARNING 2026-07-30 22:41:52,300 log Not Found: /api/players/
+WARNING 2026-07-30 22:51:35,934 log Not Found: /api/players/
+WARNING 2026-07-30 22:51:36,028 log Not Found: /api/players/
+WARNING 2026-07-30 22:51:46,416 log Not Found: /api/players/
+WARNING 2026-07-30 22:51:46,440 log Not Found: /api/players/
+INFO 2026-07-30 22:52:04,605 autoreload Watching for file changes with StatReloader
+WARNING 2026-07-30 22:52:25,177 log Not Found: /api/players/
+WARNING 2026-07-30 22:52:25,194 log Not Found: /api/players/
+WARNING 2026-07-30 22:52:45,099 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:52:45,102 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:52:45,114 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:52:45,117 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:52:52,544 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:52:52,555 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:52:52,855 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:52:52,873 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:53:02,011 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:53:04,480 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:10,866 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:15,448 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:17,351 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:18,370 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:19,740 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:20,910 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:22,441 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:23,826 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:24,825 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:26,151 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:27,084 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:29,967 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:32,324 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:42,456 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:43,519 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:44,550 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:47,891 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:49,479 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:53:56,521 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:53:56,536 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:53:56,546 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:53:56,562 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:04,804 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:04,817 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:06,752 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:06,772 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:07,982 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:07,992 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:09,672 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:09,687 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:10,941 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:10,953 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:12,019 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:12,031 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:13,267 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:54:13,278 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-30 22:58:51,372 log Not Found: /api/players/
+WARNING 2026-07-30 22:58:51,404 log Not Found: /api/players/
+WARNING 2026-07-30 22:58:51,727 log Not Found: /api/players/
+WARNING 2026-07-30 22:58:51,792 log Not Found: /api/players/
+WARNING 2026-07-30 22:58:54,625 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:58:54,628 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:58:54,647 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:58:54,651 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:58:54,925 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:58:54,928 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:58:54,944 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-30 22:58:54,947 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-30 22:58:57,574 log Not Found: /api/players/
+WARNING 2026-07-30 22:58:57,597 log Not Found: /api/players/
+WARNING 2026-07-30 22:58:57,902 log Not Found: /api/players/
+WARNING 2026-07-30 22:58:57,941 log Not Found: /api/players/
+INFO 2026-07-30 23:00:12,600 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-07-30 23:00:14,925 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 23:00:33,807 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-07-30 23:00:35,444 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 23:01:35,160 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-07-30 23:01:36,834 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 23:06:12,208 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-07-30 23:06:14,185 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 23:06:56,228 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-07-30 23:06:57,867 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 23:07:31,445 autoreload D:\CrickIntel\CricIntel-main\backend\apps\predictions\views.py changed, reloading.
+INFO 2026-07-30 23:07:33,333 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 23:09:40,850 autoreload D:\CrickIntel\CricIntel-main\backend\apps\predictions\views.py changed, reloading.
+INFO 2026-07-30 23:09:42,567 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 23:22:41,843 autoreload Watching for file changes with StatReloader
+WARNING 2026-07-30 23:24:34,340 log Not Found: /api/players/
+WARNING 2026-07-30 23:24:34,359 log Not Found: /api/players/
+WARNING 2026-07-30 23:24:34,388 log Unauthorized: /api/predict/
+WARNING 2026-07-30 23:24:34,390 log Unauthorized: /api/venues/
+WARNING 2026-07-30 23:24:34,391 log Unauthorized: /api/players/
+WARNING 2026-07-30 23:24:34,440 log Unauthorized: /api/predict/
+WARNING 2026-07-30 23:24:34,443 log Unauthorized: /api/players/
+WARNING 2026-07-30 23:24:34,446 log Unauthorized: /api/venues/
+WARNING 2026-07-30 23:24:34,527 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-30 23:24:34,528 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-30 23:24:34,533 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-30 23:24:34,543 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-30 23:24:34,547 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-30 23:24:34,534 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-30 23:24:34,551 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-30 23:24:34,550 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-30 23:24:34,556 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-30 23:24:34,554 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-30 23:24:34,559 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-30 23:24:34,565 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-30 23:25:58,328 log Unauthorized: /api/auth/login/
+WARNING 2026-07-30 23:26:07,159 log Unauthorized: /api/auth/login/
+INFO 2026-07-30 23:27:26,804 autoreload Watching for file changes with StatReloader
+INFO 2026-07-30 23:28:07,514 views Nodemailer dispatch output: [NODEMAILER_SUCCESS] OTP sent to adityalodhiya111@gmail.com (MessageID: <bc3b75b6-d29b-2dfe-428a-d5ef4efb9b74@cricintel.com>)
+[OTP_CODE] 434855
+
+WARNING 2026-07-30 23:28:44,704 log Not Found: /api/players/
+WARNING 2026-07-30 23:28:44,718 log Not Found: /api/players/
+WARNING 2026-07-30 23:28:54,502 log Not Found: /api/players/
+WARNING 2026-07-30 23:28:54,520 log Not Found: /api/players/
+INFO 2026-07-30 23:44:07,148 autoreload Watching for file changes with StatReloader
+WARNING 2026-07-30 23:44:19,511 log Not Found: /api/players/
+WARNING 2026-07-30 23:44:19,531 log Not Found: /api/players/
+WARNING 2026-07-30 23:44:38,522 log Not Found: /api/players/
+WARNING 2026-07-30 23:44:38,553 log Not Found: /api/players/
+INFO 2026-07-30 23:47:43,278 autoreload Watching for file changes with StatReloader
+WARNING 2026-07-31 00:01:03,058 log Not Found: /api/players/
+WARNING 2026-07-31 00:01:07,163 log Not Found: /api/players/
+WARNING 2026-07-31 00:01:07,182 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:01:07,444 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:01:07,548 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:01:07,604 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:01:29,343 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:01:43,057 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-31 00:02:44,862 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:02:44,867 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:02:44,887 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:02:44,890 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:02:45,175 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:02:45,177 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:02:45,195 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:02:45,199 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:02:57,079 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:02:57,094 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:02:57,383 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:02:57,394 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:03:03,483 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:03:09,879 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:03:13,140 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:18,075 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:24,896 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:26,253 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:27,377 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:28,585 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:29,988 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:31,544 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:38,635 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:38,652 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:38,981 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:39,005 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:42,982 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:42,988 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:03:43,006 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:43,011 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:03:43,295 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:43,298 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:03:43,314 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 00:03:43,320 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 00:03:49,350 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 00:03:49,367 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 00:03:49,379 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 00:03:49,391 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 00:03:49,687 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 00:03:49,715 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 00:03:49,730 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 00:03:49,744 log Not Found: /api/visualizations/analytics/
+INFO 2026-07-31 01:01:56,580 autoreload Watching for file changes with StatReloader
+WARNING 2026-07-31 01:02:51,517 log Not Found: /api/players/
+WARNING 2026-07-31 01:02:51,542 log Not Found: /api/players/
+WARNING 2026-07-31 01:02:51,580 log Unauthorized: /api/predict/
+WARNING 2026-07-31 01:02:51,581 log Unauthorized: /api/venues/
+WARNING 2026-07-31 01:02:51,584 log Unauthorized: /api/players/
+WARNING 2026-07-31 01:02:51,611 log Unauthorized: /api/predict/
+WARNING 2026-07-31 01:02:51,616 log Unauthorized: /api/venues/
+WARNING 2026-07-31 01:02:51,620 log Unauthorized: /api/players/
+WARNING 2026-07-31 01:02:51,715 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 01:02:51,727 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 01:02:51,730 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 01:02:51,745 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 01:02:51,753 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 01:02:51,757 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 01:02:51,746 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 01:02:51,758 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 01:02:51,762 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 01:02:51,762 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 01:02:51,769 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 01:02:51,773 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 01:03:28,005 log Unauthorized: /api/auth/login/
+WARNING 2026-07-31 01:03:41,856 log Not Found: /api/players/
+WARNING 2026-07-31 01:03:41,901 log Not Found: /api/players/
+WARNING 2026-07-31 01:03:49,739 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:03:49,771 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:03:50,106 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:03:50,131 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:04:01,880 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:04:06,997 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:04:17,060 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-31 01:05:14,202 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:05:14,207 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 01:05:14,226 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:05:14,230 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 01:05:14,509 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:05:14,512 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 01:05:14,527 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 01:05:14,534 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:05:24,705 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 01:05:24,718 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 01:05:25,011 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 01:05:25,024 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 01:05:27,927 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:05:32,171 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:05:35,162 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:05:56,342 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:05:56,362 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:05:56,706 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:05:56,735 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:06:01,471 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-31 01:07:03,983 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:07:10,626 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-31 01:07:41,223 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-31 01:08:03,052 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:08:06,310 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:08:08,281 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-31 01:08:09,833 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 01:08:09,841 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:08:09,858 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 01:08:09,876 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:08:10,143 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:08:10,147 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 01:08:10,165 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:08:10,169 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 01:08:12,717 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:08:12,732 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:08:13,058 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:08:13,097 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:08:58,120 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:08:59,932 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-31 01:09:44,368 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 01:09:48,614 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:09:48,628 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:09:48,640 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:09:48,652 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:09:48,931 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:09:48,943 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:09:48,967 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:09:48,990 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:09:52,924 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:09:52,937 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:05,379 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:05,390 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:26,253 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:26,267 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:31,487 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:31,500 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:39,932 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:39,942 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:43,783 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:43,795 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:50,507 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:50,521 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:51,732 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:51,748 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:53,131 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:53,143 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:55,050 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:55,062 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:59,787 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:10:59,800 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:11:04,002 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:11:04,029 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:11:05,298 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:11:05,309 log Not Found: /api/visualizations/analytics/
+WARNING 2026-07-31 01:11:11,092 log Not Found: /api/players/
+WARNING 2026-07-31 01:11:11,118 log Not Found: /api/players/
+WARNING 2026-07-31 01:11:11,410 log Not Found: /api/players/
+WARNING 2026-07-31 01:11:11,442 log Not Found: /api/players/
+INFO 2026-07-31 11:35:26,514 autoreload Watching for file changes with StatReloader
+WARNING 2026-07-31 11:36:32,122 log Not Found: /api/players/
+WARNING 2026-07-31 11:36:32,143 log Not Found: /api/players/
+WARNING 2026-07-31 11:36:36,916 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:36:36,918 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:36:36,941 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:36:36,945 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:36:37,295 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:36:37,302 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:36:37,320 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:36:37,330 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:37:11,892 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-31 11:38:06,789 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:38:11,027 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:38:11,031 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:38:11,050 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:38:11,058 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:38:11,329 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:38:11,331 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:38:11,345 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:38:11,350 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:38:23,618 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:38:23,627 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:38:23,655 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:38:23,660 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:38:23,952 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:38:23,958 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:38:23,973 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:38:23,976 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:38:25,910 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:38:25,913 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:38:25,930 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:38:25,934 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:38:26,233 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:38:26,237 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:38:26,255 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:38:26,260 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:38:29,756 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:38:29,772 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:38:30,065 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:38:30,078 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:39:02,002 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:39:02,007 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:39:02,032 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:39:02,033 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:39:02,316 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:39:02,320 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:39:02,338 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:39:02,342 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:39:05,365 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:39:05,368 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:39:16,425 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-31 11:39:58,904 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:39:58,913 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:40:15,997 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-31 11:41:00,634 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:41:00,647 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:41:05,160 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-31 11:41:27,647 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:41:31,497 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-31 11:41:34,347 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:41:34,360 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:41:34,376 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:41:34,379 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:41:34,659 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:41:34,664 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:41:34,681 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:41:34,684 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 11:41:36,617 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:41:36,624 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:41:36,640 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:41:36,649 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:41:36,943 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:41:36,948 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 11:41:36,986 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 11:41:36,998 log Not Found: /api/visualizations/venue-stats/
+INFO 2026-07-31 18:20:56,240 autoreload Watching for file changes with StatReloader
+WARNING 2026-07-31 18:21:47,575 log Not Found: /api/players/
+WARNING 2026-07-31 18:21:47,607 log Not Found: /api/players/
+WARNING 2026-07-31 18:21:47,673 log Unauthorized: /api/players/
+WARNING 2026-07-31 18:21:47,675 log Unauthorized: /api/predict/
+WARNING 2026-07-31 18:21:47,676 log Unauthorized: /api/venues/
+WARNING 2026-07-31 18:21:47,712 log Unauthorized: /api/predict/
+WARNING 2026-07-31 18:21:47,712 log Unauthorized: /api/players/
+WARNING 2026-07-31 18:21:47,715 log Unauthorized: /api/venues/
+WARNING 2026-07-31 18:21:47,829 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 18:21:47,833 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 18:21:47,839 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 18:21:47,842 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 18:21:47,848 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 18:21:47,851 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 18:21:47,853 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 18:21:47,858 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 18:21:47,861 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 18:21:47,857 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 18:21:47,866 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 18:21:47,867 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 18:22:01,174 log Not Found: /api/players/
+WARNING 2026-07-31 18:22:01,208 log Not Found: /api/players/
+WARNING 2026-07-31 18:22:05,585 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 18:22:05,826 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 18:22:06,089 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 18:22:06,249 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 18:22:06,379 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 18:22:06,398 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 18:22:06,405 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 18:22:06,429 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 18:22:20,643 log Not Found: /api/visualizations/prediction-analysis/
+WARNING 2026-07-31 18:22:49,303 log Not Found: /api/visualizations/venue-stats/
+WARNING 2026-07-31 18:22:49,308 log Not Found: /api/visualizations/options/
+WARNING 2026-07-31 18:23:08,645 log Not Found: /api/visualizations/prediction-analysis/
+INFO 2026-07-31 18:25:23,001 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-07-31 18:25:27,338 autoreload Watching for file changes with StatReloader
+INFO 2026-07-31 18:27:11,715 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-07-31 18:27:13,893 autoreload Watching for file changes with StatReloader
+INFO 2026-07-31 18:28:25,330 autoreload D:\CrickIntel\CricIntel-main\backend\config\settings.py changed, reloading.
+INFO 2026-07-31 18:28:27,374 autoreload Watching for file changes with StatReloader
+INFO 2026-07-31 18:28:33,886 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-07-31 18:28:35,565 autoreload Watching for file changes with StatReloader
+INFO 2026-07-31 18:30:34,365 autoreload Watching for file changes with StatReloader
+ERROR 2026-07-31 18:31:47,976 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+INFO 2026-07-31 19:32:36,316 views Nodemailer dispatch output: ◇ injected env (29) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+[NODEMAILER_SUCCESS] OTP sent to mihirsuriya@gmail.com (MessageID: <94fc82df-6a94-e017-9c85-259ab11dbd5f@cricintel.com>)
+[OTP_CODE] 983737
+
+WARNING 2026-07-31 19:37:59,351 log Unauthorized: /api/auth/login/
+ERROR 2026-07-31 19:42:15,228 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+INFO 2026-07-31 20:00:03,365 autoreload Watching for file changes with StatReloader
+WARNING 2026-07-31 20:00:16,568 log Unauthorized: /api/predict/
+WARNING 2026-07-31 20:00:16,568 log Unauthorized: /api/venues/
+WARNING 2026-07-31 20:00:16,569 log Unauthorized: /api/players/
+WARNING 2026-07-31 20:00:16,569 log Unauthorized: /api/matches/
+WARNING 2026-07-31 20:00:16,569 log Unauthorized: /api/analytics/dashboard/
+WARNING 2026-07-31 20:00:16,612 log Unauthorized: /api/predict/
+WARNING 2026-07-31 20:00:16,615 log Unauthorized: /api/venues/
+WARNING 2026-07-31 20:00:16,617 log Unauthorized: /api/players/
+WARNING 2026-07-31 20:00:16,622 log Unauthorized: /api/matches/
+WARNING 2026-07-31 20:00:16,625 log Unauthorized: /api/analytics/dashboard/
+WARNING 2026-07-31 20:00:16,694 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 20:00:16,696 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 20:00:16,699 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 20:00:16,701 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 20:00:16,708 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 20:00:16,712 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 20:00:16,716 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 20:00:16,717 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 20:00:16,723 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 20:00:16,725 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 20:00:16,726 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 20:00:16,727 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 20:00:16,761 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 20:00:16,763 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 20:00:16,765 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 20:00:16,768 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-07-31 20:00:16,766 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 20:00:16,768 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 20:00:16,769 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-07-31 20:00:16,774 log Forbidden: /api/auth/token/refresh/
+ERROR 2026-07-31 20:02:36,573 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+ERROR 2026-07-31 20:03:50,013 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+WARNING 2026-07-31 20:04:36,254 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:36,328 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:36,567 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:36,623 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:55,203 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:55,238 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:55,502 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:55,525 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:56,915 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:56,982 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:57,242 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:57,311 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:58,999 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:59,029 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:59,302 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-07-31 20:04:59,337 log Not Found: /api/visualizations/matchup-radar/
+INFO 2026-07-31 20:21:21,434 autoreload Watching for file changes with StatReloader
+INFO 2026-07-31 20:21:58,230 autoreload Watching for file changes with StatReloader
+WARNING 2026-07-31 20:22:09,610 log Not Found: /api/analytics/model-info/
+WARNING 2026-07-31 20:22:09,658 log Not Found: /api/analytics/model-info/
+INFO 2026-07-31 20:23:27,785 autoreload D:\CrickIntel\CricIntel-main\backend\apps\analytics\views.py changed, reloading.
+INFO 2026-07-31 20:23:29,896 autoreload Watching for file changes with StatReloader
+INFO 2026-07-31 20:27:01,812 autoreload D:\CrickIntel\CricIntel-main\backend\apps\venues\views.py changed, reloading.
+INFO 2026-07-31 20:27:04,144 autoreload Watching for file changes with StatReloader
+INFO 2026-08-06 10:16:17,478 autoreload Watching for file changes with StatReloader
+WARNING 2026-08-06 10:17:14,006 log Unauthorized: /api/predict/
+WARNING 2026-08-06 10:17:14,006 log Unauthorized: /api/analytics/model-info/
+WARNING 2026-08-06 10:17:14,006 log Unauthorized: /api/matches/
+WARNING 2026-08-06 10:17:14,007 log Unauthorized: /api/venues/
+WARNING 2026-08-06 10:17:14,008 log Unauthorized: /api/players/
+WARNING 2026-08-06 10:17:14,008 log Unauthorized: /api/analytics/dashboard/
+WARNING 2026-08-06 10:17:14,098 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 10:17:14,105 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 10:17:14,103 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 10:17:14,147 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 10:17:14,188 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 10:17:14,166 log Unauthorized: /api/predict/
+WARNING 2026-08-06 10:17:14,180 log Unauthorized: /api/analytics/model-info/
+WARNING 2026-08-06 10:17:14,217 log Unauthorized: /api/matches/
+WARNING 2026-08-06 10:17:14,222 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 10:17:14,251 log Unauthorized: /api/venues/
+WARNING 2026-08-06 10:17:14,276 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 10:17:14,296 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 10:17:14,298 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 10:17:14,303 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 10:17:14,304 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 10:17:14,311 log Unauthorized: /api/players/
+WARNING 2026-08-06 10:17:14,327 log Unauthorized: /api/analytics/dashboard/
+WARNING 2026-08-06 10:17:14,333 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 10:17:45,494 log Unauthorized: /api/auth/login/
+ERROR 2026-08-06 10:21:28,677 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+INFO 2026-08-06 11:34:15,151 autoreload Watching for file changes with StatReloader
+WARNING 2026-08-06 11:34:43,850 log Unauthorized: /api/predict/
+WARNING 2026-08-06 11:34:43,851 log Unauthorized: /api/analytics/model-info/
+WARNING 2026-08-06 11:34:43,851 log Unauthorized: /api/players/
+WARNING 2026-08-06 11:34:43,851 log Unauthorized: /api/venues/
+WARNING 2026-08-06 11:34:43,852 log Unauthorized: /api/analytics/dashboard/
+WARNING 2026-08-06 11:34:43,852 log Unauthorized: /api/matches/
+WARNING 2026-08-06 11:34:43,895 log Unauthorized: /api/predict/
+WARNING 2026-08-06 11:34:43,898 log Unauthorized: /api/analytics/model-info/
+WARNING 2026-08-06 11:34:43,901 log Unauthorized: /api/venues/
+WARNING 2026-08-06 11:34:43,904 log Unauthorized: /api/players/
+WARNING 2026-08-06 11:34:43,907 log Unauthorized: /api/analytics/dashboard/
+WARNING 2026-08-06 11:34:43,910 log Unauthorized: /api/matches/
+WARNING 2026-08-06 11:34:44,004 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 11:34:44,005 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 11:34:44,007 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 11:34:44,010 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 11:34:44,012 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 11:34:44,016 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 11:34:44,023 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 11:34:44,025 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 11:34:44,026 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 11:34:44,028 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 11:34:44,032 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 11:34:44,034 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 11:34:44,052 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 11:34:44,054 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 11:34:44,055 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 11:34:44,056 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 11:34:44,066 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 11:34:44,068 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 11:34:44,068 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 11:34:44,070 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 11:34:44,079 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 11:34:44,080 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 11:34:44,084 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 11:34:44,086 log Forbidden: /api/auth/token/refresh/
+ERROR 2026-08-06 11:37:05,900 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+ERROR 2026-08-06 11:38:28,852 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+ERROR 2026-08-06 11:40:31,654 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+INFO 2026-08-06 15:18:41,972 autoreload Watching for file changes with StatReloader
+WARNING 2026-08-06 15:19:13,993 log Unauthorized: /api/predict/
+WARNING 2026-08-06 15:19:13,993 log Unauthorized: /api/matches/
+WARNING 2026-08-06 15:19:13,994 log Unauthorized: /api/analytics/model-info/
+WARNING 2026-08-06 15:19:13,994 log Unauthorized: /api/venues/
+WARNING 2026-08-06 15:19:13,995 log Unauthorized: /api/analytics/dashboard/
+WARNING 2026-08-06 15:19:13,995 log Unauthorized: /api/players/
+WARNING 2026-08-06 15:19:14,056 log Unauthorized: /api/predict/
+WARNING 2026-08-06 15:19:14,059 log Unauthorized: /api/analytics/model-info/
+WARNING 2026-08-06 15:19:14,065 log Unauthorized: /api/venues/
+WARNING 2026-08-06 15:19:14,070 log Unauthorized: /api/analytics/dashboard/
+WARNING 2026-08-06 15:19:14,073 log Unauthorized: /api/matches/
+WARNING 2026-08-06 15:19:14,076 log Unauthorized: /api/players/
+WARNING 2026-08-06 15:19:14,246 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:19:14,248 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 15:19:14,262 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:19:14,263 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 15:19:14,270 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:19:14,272 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 15:19:14,278 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:19:14,283 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:19:14,287 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:19:14,288 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 15:19:14,295 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 15:19:14,303 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 15:19:14,333 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:19:14,335 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:19:14,337 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:19:14,338 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 15:19:14,338 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 15:19:14,341 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 15:19:14,373 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:19:14,374 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 15:19:14,391 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:19:14,391 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 15:19:14,406 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:19:14,409 log Forbidden: /api/auth/token/refresh/
+ERROR 2026-08-06 15:21:50,762 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+INFO 2026-08-06 15:28:41,445 autoreload D:\CrickIntel\CricIntel-main\backend\apps\predictions\views.py changed, reloading.
+INFO 2026-08-06 15:28:46,065 autoreload Watching for file changes with StatReloader
+ERROR 2026-08-06 15:31:02,166 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+ERROR 2026-08-06 15:33:02,884 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+ERROR 2026-08-06 15:33:19,940 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+INFO 2026-08-06 15:38:11,145 autoreload D:\CrickIntel\CricIntel-main\backend\apps\predictions\views.py changed, reloading.
+INFO 2026-08-06 15:38:14,259 autoreload Watching for file changes with StatReloader
+WARNING 2026-08-06 15:38:48,516 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:38:48,519 log Forbidden: /api/predict/
+WARNING 2026-08-06 15:42:12,860 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:42:12,860 log Forbidden: /api/predict/
+WARNING 2026-08-06 15:42:12,888 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 15:42:12,890 log Forbidden: /api/visualizations/prediction-analysis/
+INFO 2026-08-06 15:44:56,343 autoreload Watching for file changes with StatReloader
+ERROR 2026-08-06 15:47:29,723 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+WARNING 2026-08-06 15:48:26,921 log Not Found: /api/players/ind_3/stats/
+WARNING 2026-08-06 15:48:35,101 log Not Found: /api/players/ind_3/stats/
+WARNING 2026-08-06 15:48:44,905 log Not Found: /api/players/ind_3/stats/
+WARNING 2026-08-06 15:48:52,073 log Not Found: /api/players/ind_3/stats/
+WARNING 2026-08-06 15:48:58,041 log Not Found: /api/players/ind_1/stats/
+WARNING 2026-08-06 15:49:07,914 log Not Found: /api/players/ind_1/stats/
+WARNING 2026-08-06 15:49:17,761 log Not Found: /api/players/ind_1/stats/
+WARNING 2026-08-06 15:49:19,437 log Not Found: /api/players/ind_1/stats/
+WARNING 2026-08-06 15:49:33,469 log Not Found: /api/players/ind_1/stats/
+WARNING 2026-08-06 15:49:34,118 log Not Found: /api/players/ind_1/stats/
+ERROR 2026-08-06 15:53:46,906 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+ERROR 2026-08-06 15:54:37,244 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+INFO 2026-08-06 18:01:06,578 autoreload Watching for file changes with StatReloader
+WARNING 2026-08-06 18:02:37,384 log Not Found: /
+WARNING 2026-08-06 18:02:37,516 log Not Found: /favicon.ico
+WARNING 2026-08-06 18:03:48,384 log Unauthorized: /api/auth/login/
+WARNING 2026-08-06 18:03:58,511 log Unauthorized: /api/auth/login/
+ERROR 2026-08-06 18:05:08,730 views Failed to execute Nodemailer script: Command '['node', 'D:\\CrickIntel\\CricIntel-main\\backend\\send_otp.js', 'admin1@gmail.com', '897651', 'Admin', 'verification']' timed out after 10 seconds
+WARNING 2026-08-06 18:05:31,372 log Bad Request: /api/auth/verify-otp/
+WARNING 2026-08-06 18:06:17,206 log Bad Request: /api/auth/verify-otp/
+ERROR 2026-08-06 18:09:22,876 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py", line 487, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+WARNING 2026-08-06 18:16:32,866 log Unauthorized: /api/visualizations/options/
+WARNING 2026-08-06 18:16:32,869 log Unauthorized: /api/venues/
+WARNING 2026-08-06 18:16:32,878 log Unauthorized: /api/visualizations/venue-stats/
+WARNING 2026-08-06 18:16:32,900 log Unauthorized: /api/visualizations/options/
+WARNING 2026-08-06 18:16:32,904 log Unauthorized: /api/venues/
+WARNING 2026-08-06 18:16:32,908 log Unauthorized: /api/visualizations/venue-stats/
+WARNING 2026-08-06 18:16:33,051 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 18:16:33,053 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 18:16:33,060 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 18:16:33,061 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 18:16:33,064 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 18:16:33,065 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 18:16:33,082 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 18:16:33,084 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 18:16:33,085 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 18:16:33,088 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 18:16:33,085 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 18:16:33,090 log Forbidden: /api/auth/token/refresh/
+INFO 2026-08-06 18:26:56,847 autoreload Watching for file changes with StatReloader
+ERROR 2026-08-06 18:28:17,380 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 531, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+WARNING 2026-08-06 18:29:58,648 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 18:29:58,650 log Forbidden: /api/visualizations/matchup-radar/
+INFO 2026-08-06 18:30:37,647 autoreload Watching for file changes with StatReloader
+WARNING 2026-08-06 18:30:49,589 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 18:30:49,590 log Forbidden: /api/visualizations/matchup-radar/
+ERROR 2026-08-06 18:32:39,246 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 531, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+WARNING 2026-08-06 18:38:13,866 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 18:38:13,878 log Forbidden: /api/visualizations/prediction-analysis/
+WARNING 2026-08-06 18:38:41,524 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 18:38:41,526 log Forbidden: /api/visualizations/prediction-analysis/
+INFO 2026-08-06 18:40:27,013 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-08-06 18:40:32,156 autoreload Watching for file changes with StatReloader
+WARNING 2026-08-06 18:43:26,046 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 18:43:26,050 log Forbidden: /api/visualizations/matchup-radar/
+WARNING 2026-08-06 18:43:26,409 log Not Found: /favicon.ico
+ERROR 2026-08-06 18:44:20,215 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 536, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+ERROR 2026-08-06 18:48:39,930 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 536, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+ERROR 2026-08-06 18:49:03,673 log Internal Server Error: /api/visualizations/prediction-analysis/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 536, in get
+    pie_fig.update_layout(
+TypeError: plotly.graph_objs._figure.Figure.update_layout() got multiple values for keyword argument 'font'
+INFO 2026-08-06 18:49:34,434 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-08-06 18:49:38,751 autoreload Watching for file changes with StatReloader
+INFO 2026-08-06 18:54:35,696 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-08-06 18:54:39,201 autoreload Watching for file changes with StatReloader
+ERROR 2026-08-06 18:54:58,787 log Internal Server Error: /api/visualizations/matchup-radar/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 267, in get
+    bar_fig = px.bar(df_bar, y='Metric', x='Value', orientation='h', color_discrete_sequence=['#00E676'])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\express\_chart_types.py", line 381, in bar
+    return make_figure(
+           ^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\express\_core.py", line 2518, in make_figure
+    apply_default_cascade(args, constructor=constructor)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\express\_core.py", line 1100, in apply_default_cascade
+    bar.marker.pattern.shape for bar in args["template"].data.bar
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\graph_objs\bar\marker\_pattern.py", line 210, in shape
+    return self["shape"]
+           ~~~~^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4807, in __getitem__
+    elif self._props is not None and prop in self._props:
+         ^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4502, in _props
+    return self.parent._get_child_props(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4516, in _get_child_props
+    if self._props is None:
+       ^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4502, in _props
+    return self.parent._get_child_props(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4516, in _get_child_props
+    if self._props is None:
+       ^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4502, in _props
+    return self.parent._get_child_props(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4536, in _get_child_props
+    child_ind = BaseFigure._index_is(children, child)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4022, in _index_is
+    raise ValueError("Invalid value")
+ValueError: Invalid value
+INFO 2026-08-06 18:55:11,483 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-08-06 18:55:13,991 autoreload Watching for file changes with StatReloader
+INFO 2026-08-06 19:01:46,226 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-08-06 19:01:50,387 autoreload Watching for file changes with StatReloader
+WARNING 2026-08-06 19:08:13,981 log Unauthorized: /api/visualizations/matchup-radar/
+WARNING 2026-08-06 19:08:14,022 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 19:08:14,028 log Forbidden: /api/auth/token/refresh/
+INFO 2026-08-06 19:13:35,668 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-08-06 19:13:44,357 autoreload Watching for file changes with StatReloader
+INFO 2026-08-06 19:15:33,587 autoreload Watching for file changes with StatReloader
+ERROR 2026-08-06 19:16:33,903 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 741, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+INFO 2026-08-06 23:37:35,888 autoreload Watching for file changes with StatReloader
+WARNING 2026-08-06 23:38:17,310 log Unauthorized: /api/predict/
+WARNING 2026-08-06 23:38:17,313 log Unauthorized: /api/analytics/dashboard/
+WARNING 2026-08-06 23:38:17,314 log Unauthorized: /api/matches/
+WARNING 2026-08-06 23:38:17,314 log Unauthorized: /api/venues/
+WARNING 2026-08-06 23:38:17,314 log Unauthorized: /api/players/
+WARNING 2026-08-06 23:38:17,315 log Unauthorized: /api/analytics/model-info/
+WARNING 2026-08-06 23:38:17,370 log Unauthorized: /api/predict/
+WARNING 2026-08-06 23:38:17,375 log Unauthorized: /api/analytics/dashboard/
+WARNING 2026-08-06 23:38:17,378 log Unauthorized: /api/matches/
+WARNING 2026-08-06 23:38:17,385 log Unauthorized: /api/venues/
+WARNING 2026-08-06 23:38:17,391 log Unauthorized: /api/players/
+WARNING 2026-08-06 23:38:17,398 log Unauthorized: /api/analytics/model-info/
+WARNING 2026-08-06 23:38:17,489 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 23:38:17,490 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 23:38:17,493 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 23:38:17,495 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 23:38:17,502 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 23:38:17,504 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 23:38:17,507 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 23:38:17,513 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 23:38:17,510 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 23:38:17,516 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 23:38:17,518 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 23:38:17,523 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 23:38:17,529 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 23:38:17,551 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 23:38:17,573 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 23:38:17,555 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 23:38:17,578 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 23:38:17,593 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 23:38:17,590 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 23:38:17,602 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 23:38:17,608 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-06 23:38:17,609 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 23:38:17,616 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-06 23:38:17,619 log Forbidden: /api/auth/token/refresh/
+INFO 2026-08-06 23:45:06,734 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-08-06 23:45:14,078 autoreload Watching for file changes with StatReloader
+INFO 2026-08-06 23:58:04,413 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-08-06 23:58:07,936 autoreload Watching for file changes with StatReloader
+INFO 2026-08-07 00:02:30,461 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-08-07 00:02:32,721 autoreload Watching for file changes with StatReloader
+INFO 2026-08-07 00:09:07,033 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-08-07 00:09:10,732 autoreload Watching for file changes with StatReloader
+WARNING 2026-08-07 00:41:35,949 log Not Found: /api/visualizations/filter-options/
+WARNING 2026-08-07 00:52:08,452 log Unauthorized: /api/visualizations/matchup-radar/
+WARNING 2026-08-07 00:52:08,455 log Unauthorized: /api/visualizations/options/
+WARNING 2026-08-07 00:52:08,441 log Unauthorized: /api/visualizations/venue-stats/
+WARNING 2026-08-07 00:52:08,496 log Unauthorized: /api/visualizations/matchup-radar/
+WARNING 2026-08-07 00:52:08,516 log Unauthorized: /api/visualizations/venue-stats/
+WARNING 2026-08-07 00:52:08,524 log Unauthorized: /api/visualizations/options/
+WARNING 2026-08-07 00:52:08,536 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 00:52:08,543 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 00:52:08,553 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 00:52:08,557 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 00:52:08,565 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 00:52:08,569 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 00:52:08,566 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 00:52:08,574 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 00:52:08,580 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 00:52:08,577 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 00:52:08,583 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 00:52:08,585 log Forbidden: /api/auth/token/refresh/
+INFO 2026-08-07 00:53:44,756 views Nodemailer dispatch output: ◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+[NODEMAILER_SUCCESS] OTP sent to testuser987@example.com (MessageID: <1ec7b961-e3c3-28c0-da33-89daf7bc5bcd@cricintel.com>)
+[OTP_CODE] 178095
+
+WARNING 2026-08-07 00:54:01,510 log Unauthorized: /api/visualizations/matchup-radar/
+WARNING 2026-08-07 00:54:01,543 log Unauthorized: /api/visualizations/matchup-radar/
+WARNING 2026-08-07 00:54:01,554 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 00:54:01,556 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 00:54:01,587 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 00:54:01,594 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 00:54:45,348 log Bad Request: /api/auth/verify-otp/
+WARNING 2026-08-07 00:55:32,978 log Bad Request: /api/auth/verify-otp/
+WARNING 2026-08-07 00:56:41,789 log Unauthorized: /api/auth/login/
+WARNING 2026-08-07 00:57:16,790 log Unauthorized: /api/auth/login/
+WARNING 2026-08-07 00:58:04,460 log Unauthorized: /api/auth/login/
+WARNING 2026-08-07 01:00:59,165 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-08-07 01:02:43,036 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-08-07 01:02:43,384 log Not Found: /api/visualizations/matchup-radar/
+WARNING 2026-08-07 01:07:07,112 log Not Found: /api/visualizations/matchup-radar/
+INFO 2026-08-07 01:07:53,252 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-08-07 01:07:59,721 autoreload Watching for file changes with StatReloader
+ERROR 2026-08-07 01:08:32,495 log Internal Server Error: /api/visualizations/matchup-radar/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 272, in get
+    bar_fig = px.bar(df_bar, y='Metric', x='Value', orientation='h', color_discrete_sequence=['#00E676'])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\express\_chart_types.py", line 381, in bar
+    return make_figure(
+           ^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\express\_core.py", line 2518, in make_figure
+    apply_default_cascade(args, constructor=constructor)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\express\_core.py", line 1100, in apply_default_cascade
+    bar.marker.pattern.shape for bar in args["template"].data.bar
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\graph_objs\bar\marker\_pattern.py", line 210, in shape
+    return self["shape"]
+           ~~~~^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4807, in __getitem__
+    elif self._props is not None and prop in self._props:
+         ^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4502, in _props
+    return self.parent._get_child_props(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4516, in _get_child_props
+    if self._props is None:
+       ^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4502, in _props
+    return self.parent._get_child_props(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4516, in _get_child_props
+    if self._props is None:
+       ^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4502, in _props
+    return self.parent._get_child_props(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4536, in _get_child_props
+    child_ind = BaseFigure._index_is(children, child)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\plotly\basedatatypes.py", line 4022, in _index_is
+    raise ValueError("Invalid value")
+ValueError: Invalid value
+WARNING 2026-08-07 01:12:10,942 log Unauthorized: /api/venues/
+INFO 2026-08-07 01:15:27,830 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-08-07 01:15:33,157 autoreload Watching for file changes with StatReloader
+ERROR 2026-08-07 01:20:55,275 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 780, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 01:20:56,280 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 780, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 01:21:00,503 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 780, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 01:21:02,233 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 780, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 01:21:05,278 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 780, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 01:21:09,373 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 780, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 01:21:13,931 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 780, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 01:21:16,339 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 780, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 01:21:25,568 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 780, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 01:21:33,408 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 780, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+INFO 2026-08-07 01:28:25,321 autoreload D:\CrickIntel\CricIntel-main\backend\apps\matches\views.py changed, reloading.
+INFO 2026-08-07 01:28:28,019 autoreload Watching for file changes with StatReloader
+INFO 2026-08-07 01:36:42,376 autoreload D:\CrickIntel\CricIntel-main\backend\apps\visualizations\views.py changed, reloading.
+INFO 2026-08-07 01:36:45,599 autoreload Watching for file changes with StatReloader
+INFO 2026-08-07 08:34:23,207 autoreload Watching for file changes with StatReloader
+WARNING 2026-08-07 08:34:38,976 log Unauthorized: /api/predict/
+WARNING 2026-08-07 08:34:38,976 log Unauthorized: /api/venues/
+WARNING 2026-08-07 08:34:38,976 log Unauthorized: /api/matches/
+WARNING 2026-08-07 08:34:38,976 log Unauthorized: /api/analytics/dashboard/
+WARNING 2026-08-07 08:34:38,977 log Unauthorized: /api/players/
+WARNING 2026-08-07 08:34:38,977 log Unauthorized: /api/analytics/model-info/
+WARNING 2026-08-07 08:34:39,043 log Unauthorized: /api/matches/
+WARNING 2026-08-07 08:34:39,050 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 08:34:39,050 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 08:34:39,048 log Unauthorized: /api/venues/
+WARNING 2026-08-07 08:34:39,054 log Unauthorized: /api/predict/
+WARNING 2026-08-07 08:34:39,059 log Unauthorized: /api/analytics/dashboard/
+WARNING 2026-08-07 08:34:39,060 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 08:34:39,061 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 08:34:39,079 log Unauthorized: /api/players/
+WARNING 2026-08-07 08:34:39,092 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 08:34:39,090 log Unauthorized: /api/analytics/model-info/
+WARNING 2026-08-07 08:34:39,097 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 08:34:39,099 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 08:34:39,106 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 08:34:39,133 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 08:34:39,134 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 08:34:39,143 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 08:34:39,144 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 08:34:39,147 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 08:34:39,148 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 08:34:39,149 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 08:34:39,151 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 08:34:39,175 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 08:34:39,177 security_middleware Blocked API request without valid client header from 127.0.0.1
+WARNING 2026-08-07 08:34:39,178 log Forbidden: /api/auth/token/refresh/
+WARNING 2026-08-07 08:34:39,179 log Forbidden: /api/auth/token/refresh/
+ERROR 2026-08-07 08:38:57,198 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 08:38:59,821 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 08:39:01,886 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 08:39:03,189 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 08:39:04,913 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 08:39:06,265 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 08:39:14,779 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 08:39:17,980 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 08:40:05,104 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 08:54:17,646 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 08:55:18,456 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+WARNING 2026-08-07 09:01:36,854 log Unauthorized: /api/auth/login/
+ERROR 2026-08-07 09:02:35,695 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 09:02:36,095 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 09:02:36,450 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 09:02:36,833 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+ERROR 2026-08-07 09:03:02,796 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+WARNING 2026-08-07 09:07:18,028 log Not Found: /api/players/pak_1/stats/
+WARNING 2026-08-07 09:07:26,838 log Not Found: /api/players/pak_1/stats/
+WARNING 2026-08-07 09:07:38,118 log Not Found: /api/players/pak_1/stats/
+WARNING 2026-08-07 09:07:42,489 log Not Found: /api/players/pak_1/stats/
+ERROR 2026-08-07 09:10:06,852 log Internal Server Error: /api/visualizations/venue-stats/
+Traceback (most recent call last):
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CrickIntel\cricintel-main\backend\apps\visualizations\views.py", line 829, in get
+    "matchesPlayedTeams": matches_played
+                          ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'matches_played' where it is not associated with a value
+INFO 2026-08-07 09:14:44,250 autoreload Watching for file changes with StatReloader
+WARNING 2026-08-07 09:15:03,769 log Not Found: /
+WARNING 2026-08-07 09:15:04,061 log Not Found: /
+WARNING 2026-08-07 09:15:04,370 log Not Found: /favicon.ico
+INFO 2026-08-07 09:17:36,990 autoreload Watching for file changes with StatReloader
+WARNING 2026-08-07 09:17:42,663 log Not Found: /
+WARNING 2026-08-07 09:17:46,909 log Not Found: /aadmin
+WARNING 2026-08-07 09:21:46,266 log Bad Request: /api/auth/register/
+WARNING 2026-08-07 09:21:50,937 log Bad Request: /api/auth/register/
+INFO 2026-08-07 09:23:45,745 views Nodemailer dispatch output: ◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
+[NODEMAILER_SUCCESS] OTP sent to rudrabhavsar2605@gmail.com (MessageID: <0061f5fd-f372-d478-65b5-b51907ac30ab@cricintel.com>)
+[OTP_CODE] 933343
+
+INFO 2026-08-07 10:32:40,530 views Nodemailer dispatch output: None

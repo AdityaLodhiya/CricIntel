@@ -14,6 +14,7 @@ import Matchups from '@/pages/Matchups'
 import DynamicMatchups from '@/pages/Prediction/DynamicMatchups'
 import Venues from '@/pages/Venues'
 import Analytics from '@/pages/Analytics'
+import Feedback from '@/pages/Feedback'
 import About from '@/pages/About'
 import PlayerProfile from '@/pages/PlayerProfile'
 import NotFound from '@/pages/NotFound'
@@ -65,6 +66,7 @@ const App = () => {
                     <Route path="matchups" element={<Matchups />} />
                     <Route path="venues" element={<Venues />} />
                     <Route path="analytics" element={<Analytics />} />
+                    <Route path="feedback" element={<Feedback />} />
                     <Route path="about" element={<About />} />
                     <Route path="player/:playerId" element={<PlayerProfile />} />
                 </Route>
